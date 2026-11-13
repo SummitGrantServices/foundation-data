@@ -37,6 +37,8 @@ All are GET. All return JSON; add `format=text` for compact plain text. Successf
 
 Work per request is bounded: a search reads one state partition; a recipient name needs a state; a recipient EIN reads at most 12 states; `limit` is capped at 100.
 
+`/api/foundation` also returns `web_profile` when the funder's own website has been read (`data/web_profiles/NN.json`): whether it takes requests, priorities, geography, eligibility, deadlines and how to apply, with the pages read and the date. It is `null` when the site has not been read. A missing or unreadable profile file never fails the request.
+
 ## Run locally
 
 ```

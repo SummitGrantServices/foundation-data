@@ -387,3 +387,23 @@ export async function getEinTable() {
   const idx = await getIndex()
   return new Table('index', [{ ...idx.recipient_eins, row_start: 0 }])
 }
+
+// ----------------------------------------------------------------------------- website profiles
+// data/web_profiles/NN.json holds profiles read from funders' own websites, keyed by 9-digit EIN (NN = first two digits).
+// Small files, so each shard is fetched whole and kept for INDEX_TTL_MS. A missing shard means no profile.
+const webShards = new Map()   // NN -> { at, obj }
+export async function getWebProfile(ein) {
+  const nn = String(ein).padStart(9, '0').slice(0, 2)
+  const hit = webShards.get(nn)
+  if (hit && Date.now() - hit.at < INDEX_TTL_MS) return hit.obj[String(ein).padStart(9, '0')] || null
+  let obj = {}
+  try {
+    const { buf } = await httpGet(`web_profiles/${nn}.json`)
+    obj = JSON.parse(new TextDecoder().decode(buf))
+  } catch (e) {
+    if (!(e instanceof ApiError)) throw e   // a missing shard or a data host error must not break the IRS answer
+    obj = {}
+  }
+  webShards.set(nn, { at: Date.now(), obj })
+  return obj[String(ein).padStart(9, '0')] || null
+}

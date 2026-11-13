@@ -16,7 +16,8 @@ It answers the questions a foundation directory answers: who funds what, where, 
 
 | path | purpose |
 |---|---|
-| `data/*.parquet` | Whole tables: `foundations`, `pc_funders`, `pf_officers`, `pf_app_info`, `subject_tags`, `meta`, `qa_completeness`. |
+| `data/*.parquet` | Whole tables: `foundations`, `pc_funders`, `pf_officers`, `pf_app_info`, `subject_tags`, `meta`, `qa_completeness`, and `funder_web_profiles` (read from funders' own websites, not IRS data). |
+| `data/web_profiles/*.json` | The same website profiles as small JSON files keyed by EIN, for the search service. |
 | `data/grants_all/<ST>.parquet` | Grants by recipient state (`<ST>_01`, `<ST>_02`, ... for large states; `XX` holds recipients with no US state). Sorted by fiscal year descending, then amount descending. |
 | `data/MANIFEST.json` | Every data file with bytes, rows and SHA-256. |
 | `data/index/` | Compact index files for range-request access by a small HTTP service. Described below. |
@@ -411,6 +412,29 @@ Per IRS index year: 990PF rows in the index against 990-PF returns parsed.
 | `zips_done` | INTEGER | Zip files processed. |
 | `xml_members` | BIGINT | XML files inside those zips. |
 | `parse_errors` | BIGINT | XML files that failed to parse. |
+
+### `funder_web_profiles` (website profiles; not IRS data)
+
+Everything else in this repository comes from IRS filings. This table does not. Each row was read from the funder's **own website** (never an aggregator) on the date in `checked_on`, and carries the pages it was read from in `source_urls`. It exists because a tax return rarely says how a funder actually takes requests today.
+
+Coverage is partial and grows over time: the first pass (2026-11-13) covers 612 funders. Rows are also published as small JSON files, `data/web_profiles/NN.json` (NN = first two digits of the 9-digit EIN, an object keyed by EIN), with counts in `data/web_profiles/index.json`. The search service adds the row to `/api/foundation` as `web_profile`.
+
+| Column | Meaning |
+|---|---|
+| `ein`, `name` | The funder (9-digit EIN as text). |
+| `status` | `profile` (site found and read), `no website found`, `site unreachable`, `ambiguous identity` (a site was found but could not be tied to this EIN). |
+| `website`, `website_source` | The site read, and how it was found (`return` = listed on the tax return, `search`). |
+| `accepts_unsolicited` | `yes`, `LOI first`, `invitation only`, `restricted program`, `paused`, or `not stated`. |
+| `accepts_evidence` | The words on the site that support that value, with the page. |
+| `priorities` | JSON list of stated funding priorities. |
+| `geographic_limits`, `eligibility`, `not_funded`, `types_of_support`, `grant_range_stated` | As stated on the site, or `not stated`. |
+| `deadlines`, `how_to_apply`, `application_url`, `contact` | As stated on the site. Deadlines go stale; check the page. |
+| `page_dated` | Any date on the pages read (copyright year, cycle year, news date). |
+| `conflicts_with_return` | Where the site and the latest return disagree on whether or how the funder takes requests. |
+| `source_urls` | JSON list of the pages read. |
+| `checked_on`, `confidence`, `notes` | When it was read, how sure the reader was and why, anything else worth knowing. |
+
+A website can be out of date or describe one program among several. Treat a profile as a lead to verify on the page itself, not as the funder's final word.
 
 ## Index files (`data/index/`)
 

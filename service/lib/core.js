@@ -1,6 +1,6 @@
 // core.js : the five queries. Each one mirrors the matching command of the fdb.py command-line tool.
 
-import { ApiError, getIndex, getDirectory, getState, getProfilesTable, getEinTable } from './store.js'
+import { ApiError, getIndex, getDirectory, getState, getProfilesTable, getEinTable, getWebProfile } from './store.js'
 
 const MAX_LIMIT = 100
 const MAX_PEERS = 12
@@ -79,7 +79,7 @@ export async function info() {
     states: Object.keys(idx.states),
     tags: idx.tags.map(t => ({ tag: t.tag, label: t.label, grants: t.grants })),
     endpoints: {
-      '/api/foundation': 'q = funder EIN or name fragment; optional state, pick (1 = first name match). Profile, giving by year, application information, officers, top recipients, latest grants.',
+      '/api/foundation': 'q = funder EIN or name fragment; optional state, pick (1 = first name match). Profile, giving by year, application information, officers, top recipients, latest grants. Where the funder\'s own website has been read, web_profile adds what the site says: whether it takes requests, priorities, geography, eligibility, deadlines, how to apply, with source pages and the date read.',
       '/api/funders-of': 'q = recipient EIN or name fragment (a name needs state); optional state, years, limit. Who has funded this organization.',
       '/api/search': 'state (required); optional county, tags (comma separated tag names; a single word such as aging also works when only one tag fits), all_tags=1, text, years (2022-2025), preselected (yes, no, any), min_grant, funder_type (pf, pc, any), sort (dollars, count), limit, examples. Funders ranked by matching grants.',
       '/api/peers-funders': 'eins = comma separated recipient EINs (up to 12); optional min_peers (default 2), years, limit. Funders that support several of these organizations.',
@@ -130,9 +130,12 @@ export async function foundation(p) {
   const prof = JSON.parse(row.profile)
   let byYear = {}
   try { byYear = prof.giving_by_year ? JSON.parse(prof.giving_by_year) : {} } catch { byYear = {} }
+  const web = await getWebProfile(ein)
   return {
     funder_type: row.is_pf ? 'private_foundation' : 'public_charity',
     profile: prof,
+    // read from the funder's own website on web_profile.checked_on; null when this funder's site has not been read yet
+    web_profile: web,
     giving_by_year: byYear,
     top_recipients: JSON.parse(row.top_recipients),
     top_tags: JSON.parse(row.top_tags),

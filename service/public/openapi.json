@@ -40,7 +40,7 @@
   "/api/foundation": {
    "get": {
     "operationId": "getFoundation",
-    "summary": "Profile of one funder: assets, giving by year, application information, officers, subject mix, top recipients, latest grants.",
+    "summary": "Profile of one funder: assets, giving by year, application information, officers, subject mix, top recipients, latest grants. Where the funder's own website has been read, web_profile adds what the site says (takes requests or not, priorities, geography, eligibility, deadlines, how to apply) with the pages read and the date; it is null when the site has not been read.",
     "parameters": [
      {
       "name": "q",

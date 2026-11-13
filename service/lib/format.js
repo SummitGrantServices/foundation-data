@@ -59,6 +59,20 @@ export function foundationText(o) {
     if (r.only_preselected) L.push('  NOTE: latest return checks the box "only makes contributions to preselected charitable organizations and does not accept unsolicited requests".')
     L.push('', 'OFFICERS AND TRUSTEES (latest return)', '  ' + cut(r.officers || '-', 1500))
   }
+  const w = o.web_profile
+  if (w) {
+    L.push('', `WEBSITE PROFILE (read from the funder's own website on ${w.checked_on || 'date not recorded'}; not IRS data)`)
+    L.push(`  status: ${w.status}` + (w.website ? `   website: ${w.website}` : ''))
+    if (w.status === 'profile') {
+      for (const [k, lab] of [['accepts_unsolicited', 'accepts unsolicited requests'], ['accepts_evidence', 'evidence'], ['geographic_limits', 'geographic limits'],
+        ['eligibility', 'eligibility'], ['not_funded', 'does not fund'], ['types_of_support', 'types of support'], ['grant_range_stated', 'grant range stated'],
+        ['deadlines', 'deadlines'], ['how_to_apply', 'how to apply'], ['application_url', 'application link'], ['contact', 'contact'], ['page_dated', 'page dated'],
+        ['conflicts_with_return', 'compared with the tax return'], ['confidence', 'confidence']]) if (w[k]) L.push(`  ${lab}: ${cut(String(w[k]), 700)}`)
+      if (w.priorities && w.priorities.length) L.push('  priorities: ' + cut(w.priorities.join('; '), 900))
+    }
+    if (w.notes) L.push(`  notes: ${cut(String(w.notes), 700)}`)
+    if (w.source_urls && w.source_urls.length) L.push('  pages read: ' + w.source_urls.slice(0, 8).join('  '))
+  } else L.push('', 'WEBSITE PROFILE', "  this funder's website has not been read yet")
   if (o.top_tags.length) {
     L.push('', 'SUBJECT MIX (keyword tags, share of listed dollars; a grant can carry several tags)')
     L.push('  ' + o.top_tags.map(t => `${t.tag} ${pct(t.share)}`).join('; '))
