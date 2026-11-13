@@ -1,0 +1,12 @@
+# working files of the pipeline, never published
+index_work/
+db/
+parts*/
+duck_tmp/
+logs/
+src/
+idx_*.csv
+__pycache__/
+*.tmp
+*.superseded
+.DS_Store
