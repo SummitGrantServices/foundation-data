@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Foundation data search</title>
+<style>
+  :root { --ink: #1c2530; --muted: #5b6875; --line: #d5dbe1; --bg: #f6f7f9; --accent: #1f5f8b; }
+  * { box-sizing: border-box; }
+  body { margin: 0; font: 15px/1.45 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; color: var(--ink); background: var(--bg); }
+  header, main { max-width: 1040px; margin: 0 auto; padding: 16px 20px; }
+  h1 { font-size: 22px; margin: 8px 0 2px; }
+  p.sub { margin: 0; color: var(--muted); }
+  nav { display: flex; flex-wrap: wrap; gap: 6px; margin: 18px 0 0; }
+  nav button { border: 1px solid var(--line); background: #fff; padding: 7px 12px; border-radius: 6px; cursor: pointer; font: inherit; color: var(--ink); }
+  nav button[aria-selected="true"] { background: var(--accent); border-color: var(--accent); color: #fff; }
+  form { background: #fff; border: 1px solid var(--line); border-radius: 8px; padding: 14px 16px; margin-top: 10px; display: none; }
+  form.on { display: block; }
+  .row { display: flex; flex-wrap: wrap; gap: 12px; }
+  label { display: flex; flex-direction: column; font-size: 12.5px; color: var(--muted); gap: 3px; flex: 1 1 150px; }
+  label.wide { flex: 3 1 300px; }
+  input, select { font: inherit; padding: 7px 8px; border: 1px solid var(--line); border-radius: 5px; color: var(--ink); background: #fff; min-width: 0; }
+  .go { margin-top: 12px; display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+  .go button { background: var(--accent); color: #fff; border: 0; padding: 8px 18px; border-radius: 6px; font: inherit; cursor: pointer; }
+  .hint { font-size: 12.5px; color: var(--muted); }
+  #url { margin: 14px 0 6px; font-size: 13px; word-break: break-all; }
+  #url a { color: var(--accent); }
+  pre { background: #fff; border: 1px solid var(--line); border-radius: 8px; padding: 14px 16px; overflow: auto; font: 12.5px/1.5 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; white-space: pre; min-height: 120px; }
+  footer { max-width: 1040px; margin: 0 auto; padding: 4px 20px 30px; color: var(--muted); font-size: 12.5px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Foundation data search</h1>
+  <p class="sub">US private foundations, grantmaking public charities and their grants, compiled from public IRS Form 990-PF and Form 990 Schedule I e-file records. Read only. No warranty.</p>
+  <nav role="tablist">
+    <button data-tab="search" aria-selected="true">Search funders</button>
+    <button data-tab="foundation" aria-selected="false">One funder</button>
+    <button data-tab="funders-of" aria-selected="false">Who funds a recipient</button>
+    <button data-tab="peers-funders" aria-selected="false">Funders of peers</button>
+    <button data-tab="info" aria-selected="false">About the data</button>
+  </nav>
+</header>
+<main>
+  <form id="f-search" class="on" data-endpoint="search">
+    <div class="row">
+      <label>State (required)<select name="state" id="states"><option value="">choose</option></select></label>
+      <label>County starts with<input name="county" placeholder="Palm Beach"></label>
+      <label class="wide">Tags (comma separated)<input name="tags" list="taglist" placeholder="aging_seniors,food_hunger"></label>
+      <label>Fiscal years<input name="years" placeholder="2022-2025"></label>
+    </div>
+    <div class="row" style="margin-top:10px">
+      <label class="wide">Words in purpose or recipient name<input name="text" placeholder="financial literacy"></label>
+      <label>Preselected only<select name="preselected"><option value="">any</option><option value="no">no (accepts requests)</option><option value="yes">yes</option></select></label>
+      <label>Funder type<select name="funder_type"><option value="">any</option><option value="pf">private foundations</option><option value="pc">public charities</option></select></label>
+      <label>Minimum grant<input name="min_grant" inputmode="numeric" placeholder="5000"></label>
+      <label>Limit<input name="limit" inputmode="numeric" placeholder="25"></label>
+    </div>
+    <div class="go"><button>Search</button><span class="hint">Funders are ranked by the dollars of grants that match. One state per request.</span></div>
+  </form>
+  <form id="f-foundation" data-endpoint="foundation">
+    <div class="row">
+      <label class="wide">Funder EIN or part of its name<input name="q" placeholder="350868122 or kansas health" required></label>
+      <label>State (name search only)<input name="state" maxlength="2" placeholder="KS"></label>
+    </div>
+    <div class="go"><button>Look up</button><span class="hint">A name returns the largest match and lists the others with their EINs.</span></div>
+  </form>
+  <form id="f-funders-of" data-endpoint="funders-of">
+    <div class="row">
+      <label class="wide">Recipient EIN or part of its name<input name="q" placeholder="237202594 or meals on wheels" required></label>
+      <label>State (required for a name)<input name="state" maxlength="2" placeholder="TX"></label>
+      <label>Fiscal years<input name="years" placeholder="2022-2025"></label>
+    </div>
+    <div class="go"><button>Find funders</button><span class="hint">Private foundation grants link to an EIN only when the name match was unique, so also try the name.</span></div>
+  </form>
+  <form id="f-peers-funders" data-endpoint="peers-funders">
+    <div class="row">
+      <label class="wide">Recipient EINs, comma separated (up to 12)<input name="eins" placeholder="751568798,237202594,741948646" required></label>
+      <label>At least this many peers<input name="min_peers" inputmode="numeric" placeholder="2"></label>
+      <label>Fiscal years<input name="years" placeholder="2022-2025"></label>
+    </div>
+    <div class="go"><button>Find shared funders</button><span class="hint">Funders that support several organizations like yours.</span></div>
+  </form>
+  <form id="f-info" data-endpoint="info">
+    <div class="go" style="margin-top:0"><button>Show</button><span class="hint">Build date, row counts, tags, endpoints and caveats.</span></div>
+  </form>
+  <datalist id="taglist"></datalist>
+  <div id="url"></div>
+  <pre id="out">Choose a search above. Every answer is also available as JSON: remove format=text from the address.</pre>
+</main>
+<footer>Source: Internal Revenue Service e-filed Form 990-PF and Form 990 Schedule I returns, the IRS Exempt Organizations Business Master File, and the Census ZIP to county file. Figures are as reported by filers. Verify with the funder before relying on them.</footer>
+<script>
+const out = document.getElementById('out'), urlBox = document.getElementById('url')
+document.querySelectorAll('nav button').forEach(b => b.addEventListener('click', () => {
+  document.querySelectorAll('nav button').forEach(x => x.setAttribute('aria-selected', x === b))
+  document.querySelectorAll('form').forEach(f => f.classList.toggle('on', f.id === 'f-' + b.dataset.tab))
+}))
+document.querySelectorAll('form').forEach(f => f.addEventListener('submit', async ev => {
+  ev.preventDefault()
+  const qs = new URLSearchParams()
+  for (const [k, v] of new FormData(f)) if (String(v).trim()) qs.set(k, String(v).trim())
+  qs.set('format', 'text')
+  const path = '/api/' + f.dataset.endpoint + '?' + qs
+  const json = path.replace(/[?&]format=text/, '').replace(/\?$/, '')
+  urlBox.innerHTML = ''
+  const a = document.createElement('a'); a.href = path; a.textContent = path
+  const b = document.createElement('a'); b.href = json; b.textContent = 'JSON'
+  urlBox.append('Request: ', a, '  (', b, ')')
+  out.textContent = 'Working...'
+  const t0 = performance.now()
+  try {
+    const res = await fetch(path)
+    out.textContent = await res.text()
+    urlBox.append('  ' + Math.round(performance.now() - t0) + ' ms')
+  } catch (e) { out.textContent = 'Request failed: ' + e }
+}))
+fetch('/api/info').then(r => r.json()).then(info => {
+  const s = document.getElementById('states'), t = document.getElementById('taglist')
+  for (const st of info.states || []) { const o = document.createElement('option'); o.value = o.textContent = st; s.append(o) }
+  for (const tag of info.tags || []) { const o = document.createElement('option'); o.value = tag.tag; o.label = tag.label; t.append(o) }
+}).catch(() => {})
+</script>
+</body>
+</html>

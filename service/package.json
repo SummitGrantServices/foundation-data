@@ -1,0 +1,17 @@
+{
+  "name": "foundation-data-api",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Read-only HTTP search over the foundation-data parquet index files. Serverless functions, no database, no secrets.",
+  "type": "module",
+  "engines": { "node": "22.x" },
+  "scripts": {
+    "static": "node local/static-server.mjs ../repo 8787",
+    "dev": "DATA_BASE_URL=http://127.0.0.1:8787/data node local/server.mjs 8788",
+    "test": "node local/run-tests.mjs"
+  },
+  "dependencies": {
+    "hyparquet": "1.33.0",
+    "hyparquet-compressors": "1.1.3"
+  }
+}

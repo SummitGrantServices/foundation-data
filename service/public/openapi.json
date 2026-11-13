@@ -1,0 +1,381 @@
+{
+ "openapi": "3.1.0",
+ "info": {
+  "title": "Foundation data search",
+  "version": "1.0.0",
+  "description": "Read-only search over US grantmakers and their grants, compiled from public IRS Form 990-PF and Form 990 Schedule I e-file records. No warranty."
+ },
+ "servers": [
+  {
+   "url": "https://YOUR-HOST.vercel.app"
+  }
+ ],
+ "paths": {
+  "/api/info": {
+   "get": {
+    "operationId": "getInfo",
+    "summary": "Build date, row counts, subject tags, states, endpoints and caveats.",
+    "parameters": [
+     {
+      "name": "format",
+      "in": "query",
+      "required": false,
+      "description": "Set to text for compact plain text. Omit for JSON.",
+      "schema": {
+       "type": "string",
+       "enum": [
+        "text",
+        "json"
+       ]
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "OK"
+     }
+    }
+   }
+  },
+  "/api/foundation": {
+   "get": {
+    "operationId": "getFoundation",
+    "summary": "Profile of one funder: assets, giving by year, application information, officers, subject mix, top recipients, latest grants.",
+    "parameters": [
+     {
+      "name": "q",
+      "in": "query",
+      "required": true,
+      "description": "Funder EIN (9 digits) or part of the funder name.",
+      "schema": {
+       "type": "string"
+      }
+     },
+     {
+      "name": "state",
+      "in": "query",
+      "required": false,
+      "description": "Two-letter state, only used to narrow a name search.",
+      "schema": {
+       "type": "string"
+      }
+     },
+     {
+      "name": "pick",
+      "in": "query",
+      "required": false,
+      "description": "For a name search: which match to show, 1 is the largest by assets.",
+      "schema": {
+       "type": "integer"
+      }
+     },
+     {
+      "name": "format",
+      "in": "query",
+      "required": false,
+      "description": "Set to text for compact plain text. Omit for JSON.",
+      "schema": {
+       "type": "string",
+       "enum": [
+        "text",
+        "json"
+       ]
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "OK"
+     },
+     "400": {
+      "description": "Bad request"
+     }
+    }
+   }
+  },
+  "/api/funders-of": {
+   "get": {
+    "operationId": "getFundersOf",
+    "summary": "Who has funded one recipient organization, by funder and fiscal year.",
+    "parameters": [
+     {
+      "name": "q",
+      "in": "query",
+      "required": true,
+      "description": "Recipient EIN (9 digits), or part of the recipient name together with state.",
+      "schema": {
+       "type": "string"
+      }
+     },
+     {
+      "name": "state",
+      "in": "query",
+      "required": false,
+      "description": "Two-letter state. Required when q is a name.",
+      "schema": {
+       "type": "string"
+      }
+     },
+     {
+      "name": "years",
+      "in": "query",
+      "required": false,
+      "description": "Fiscal years, for example 2022-2025 or 2024.",
+      "schema": {
+       "type": "string"
+      }
+     },
+     {
+      "name": "limit",
+      "in": "query",
+      "required": false,
+      "description": "Number of funders, default 40, at most 100.",
+      "schema": {
+       "type": "integer"
+      }
+     },
+     {
+      "name": "format",
+      "in": "query",
+      "required": false,
+      "description": "Set to text for compact plain text. Omit for JSON.",
+      "schema": {
+       "type": "string",
+       "enum": [
+        "text",
+        "json"
+       ]
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "OK"
+     },
+     "400": {
+      "description": "Bad request"
+     }
+    }
+   }
+  },
+  "/api/search": {
+   "get": {
+    "operationId": "searchFunders",
+    "summary": "Funders ranked by the grants they made to recipients in one state that match the filters, with example grants.",
+    "parameters": [
+     {
+      "name": "state",
+      "in": "query",
+      "required": true,
+      "description": "Two-letter recipient state. Required.",
+      "schema": {
+       "type": "string"
+      }
+     },
+     {
+      "name": "county",
+      "in": "query",
+      "required": false,
+      "description": "Recipient county name or its beginning, for example Palm Beach.",
+      "schema": {
+       "type": "string"
+      }
+     },
+     {
+      "name": "tags",
+      "in": "query",
+      "required": false,
+      "description": "Comma separated subject tags, for example aging_seniors,food_hunger. See /api/info for the list.",
+      "schema": {
+       "type": "string"
+      }
+     },
+     {
+      "name": "all_tags",
+      "in": "query",
+      "required": false,
+      "description": "Set to 1 to require every tag instead of any tag.",
+      "schema": {
+       "type": "string"
+      }
+     },
+     {
+      "name": "text",
+      "in": "query",
+      "required": false,
+      "description": "Words that must all appear in the grant purpose or recipient name.",
+      "schema": {
+       "type": "string"
+      }
+     },
+     {
+      "name": "years",
+      "in": "query",
+      "required": false,
+      "description": "Fiscal years, for example 2022-2025.",
+      "schema": {
+       "type": "string"
+      }
+     },
+     {
+      "name": "preselected",
+      "in": "query",
+      "required": false,
+      "description": "no keeps funders that accept requests (private foundations that do not check the preselected-only box, plus public charities); yes keeps preselected-only foundations.",
+      "schema": {
+       "type": "string",
+       "enum": [
+        "yes",
+        "no",
+        "any"
+       ]
+      }
+     },
+     {
+      "name": "min_grant",
+      "in": "query",
+      "required": false,
+      "description": "Smallest grant amount to count.",
+      "schema": {
+       "type": "number"
+      }
+     },
+     {
+      "name": "funder_type",
+      "in": "query",
+      "required": false,
+      "description": "pf for private foundations, pc for public charities.",
+      "schema": {
+       "type": "string",
+       "enum": [
+        "pf",
+        "pc",
+        "any"
+       ]
+      }
+     },
+     {
+      "name": "sort",
+      "in": "query",
+      "required": false,
+      "description": "Rank by dollars or by number of grants.",
+      "schema": {
+       "type": "string",
+       "enum": [
+        "dollars",
+        "count"
+       ]
+      }
+     },
+     {
+      "name": "limit",
+      "in": "query",
+      "required": false,
+      "description": "Number of funders, default 25, at most 100.",
+      "schema": {
+       "type": "integer"
+      }
+     },
+     {
+      "name": "examples",
+      "in": "query",
+      "required": false,
+      "description": "Example grants per funder, 0 to 5, default 3.",
+      "schema": {
+       "type": "integer"
+      }
+     },
+     {
+      "name": "format",
+      "in": "query",
+      "required": false,
+      "description": "Set to text for compact plain text. Omit for JSON.",
+      "schema": {
+       "type": "string",
+       "enum": [
+        "text",
+        "json"
+       ]
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "OK"
+     },
+     "400": {
+      "description": "Bad request"
+     },
+     "404": {
+      "description": "Unknown state or county"
+     }
+    }
+   }
+  },
+  "/api/peers-funders": {
+   "get": {
+    "operationId": "getPeersFunders",
+    "summary": "Funders that support several of the given recipient organizations.",
+    "parameters": [
+     {
+      "name": "eins",
+      "in": "query",
+      "required": true,
+      "description": "Comma separated recipient EINs, at most 12.",
+      "schema": {
+       "type": "string"
+      }
+     },
+     {
+      "name": "min_peers",
+      "in": "query",
+      "required": false,
+      "description": "Smallest number of the given organizations a funder must have funded, default 2.",
+      "schema": {
+       "type": "integer"
+      }
+     },
+     {
+      "name": "years",
+      "in": "query",
+      "required": false,
+      "description": "Fiscal years, for example 2022-2025.",
+      "schema": {
+       "type": "string"
+      }
+     },
+     {
+      "name": "limit",
+      "in": "query",
+      "required": false,
+      "description": "Number of funders, default 40, at most 100.",
+      "schema": {
+       "type": "integer"
+      }
+     },
+     {
+      "name": "format",
+      "in": "query",
+      "required": false,
+      "description": "Set to text for compact plain text. Omit for JSON.",
+      "schema": {
+       "type": "string",
+       "enum": [
+        "text",
+        "json"
+       ]
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "OK"
+     },
+     "400": {
+      "description": "Bad request"
+     }
+    }
+   }
+  }
+ }
+}
