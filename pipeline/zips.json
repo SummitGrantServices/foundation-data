@@ -1,0 +1,425 @@
+{
+ "2019": [
+  {
+   "name": "2019_TEOS_XML_CT1.zip",
+   "url": "https://apps.irs.gov/pub/epostcard/990/xml/2019/2019_TEOS_XML_CT1.zip",
+   "bytes": 15817
+  },
+  {
+   "name": "download990xml_2019_1.zip",
+   "url": "https://apps.irs.gov/pub/epostcard/990/xml/2019/download990xml_2019_1.zip",
+   "bytes": 405230455
+  },
+  {
+   "name": "download990xml_2019_2.zip",
+   "url": "https://apps.irs.gov/pub/epostcard/990/xml/2019/download990xml_2019_2.zip",
+   "bytes": 402125774
+  },
+  {
+   "name": "download990xml_2019_3.zip",
+   "url": "https://apps.irs.gov/pub/epostcard/990/xml/2019/download990xml_2019_3.zip",
+   "bytes": 403135309
+  },
+  {
+   "name": "download990xml_2019_4.zip",
+   "url": "https://apps.irs.gov/pub/epostcard/990/xml/2019/download990xml_2019_4.zip",
+   "bytes": 407401876
+  },
+  {
+   "name": "download990xml_2019_5.zip",
+   "url": "https://apps.irs.gov/pub/epostcard/990/xml/2019/download990xml_2019_5.zip",
+   "bytes": 399048882
+  },
+  {
+   "name": "download990xml_2019_6.zip",
+   "url": "https://apps.irs.gov/pub/epostcard/990/xml/2019/download990xml_2019_6.zip",
+   "bytes": 394490221
+  },
+  {
+   "name": "download990xml_2019_7.zip",
+   "url": "https://apps.irs.gov/pub/epostcard/990/xml/2019/download990xml_2019_7.zip",
+   "bytes": 406778542
+  },
+  {
+   "name": "download990xml_2019_8.zip",
+   "url": "https://apps.irs.gov/pub/epostcard/990/xml/2019/download990xml_2019_8.zip",
+   "bytes": 190353313
+  }
+ ],
+ "2020": [
+  {
+   "name": "2020_TEOS_XML_CT1.zip",
+   "url": "https://apps.irs.gov/pub/epostcard/990/xml/2020/2020_TEOS_XML_CT1.zip",
+   "bytes": 374013631
+  },
+  {
+   "name": "download990xml_2020_1.zip",
+   "url": "https://apps.irs.gov/pub/epostcard/990/xml/2020/download990xml_2020_1.zip",
+   "bytes": 410636484
+  },
+  {
+   "name": "download990xml_2020_2.zip",
+   "url": "https://apps.irs.gov/pub/epostcard/990/xml/2020/download990xml_2020_2.zip",
+   "bytes": 403633186
+  },
+  {
+   "name": "download990xml_2020_3.zip",
+   "url": "https://apps.irs.gov/pub/epostcard/990/xml/2020/download990xml_2020_3.zip",
+   "bytes": 402519268
+  },
+  {
+   "name": "download990xml_2020_4.zip",
+   "url": "https://apps.irs.gov/pub/epostcard/990/xml/2020/download990xml_2020_4.zip",
+   "bytes": 412449605
+  },
+  {
+   "name": "download990xml_2020_5.zip",
+   "url": "https://apps.irs.gov/pub/epostcard/990/xml/2020/download990xml_2020_5.zip",
+   "bytes": 407097915
+  },
+  {
+   "name": "download990xml_2020_6.zip",
+   "url": "https://apps.irs.gov/pub/epostcard/990/xml/2020/download990xml_2020_6.zip",
+   "bytes": 404259826
+  },
+  {
+   "name": "download990xml_2020_7.zip",
+   "url": "https://apps.irs.gov/pub/epostcard/990/xml/2020/download990xml_2020_7.zip",
+   "bytes": 406249542
+  },
+  {
+   "name": "download990xml_2020_8.zip",
+   "url": "https://apps.irs.gov/pub/epostcard/990/xml/2020/download990xml_2020_8.zip",
+   "bytes": 164852375
+  }
+ ],
+ "2021": [
+  {
+   "name": "2021_TEOS_XML_01A.zip",
+   "url": "https://apps.irs.gov/pub/epostcard/990/xml/2021/2021_TEOS_XML_01A.zip",
+   "bytes": 3715545729
+  }
+ ],
+ "2022": [
+  {
+   "name": "2022_TEOS_XML_01A.zip",
+   "url": "https://apps.irs.gov/pub/epostcard/990/xml/2022/2022_TEOS_XML_01A.zip",
+   "bytes": 2603666925
+  },
+  {
+   "name": "2022_TEOS_XML_02A.zip",
+   "url": "https://apps.irs.gov/pub/epostcard/990/xml/2022/2022_TEOS_XML_02A.zip",
+   "bytes": 1408196885
+  }
+ ],
+ "2023": [
+  {
+   "name": "2023_TEOS_XML_01A.zip",
+   "url": "https://apps.irs.gov/pub/epostcard/990/xml/2023/2023_TEOS_XML_01A.zip",
+   "bytes": 123052879
+  },
+  {
+   "name": "2023_TEOS_XML_02A.zip",
+   "url": "https://apps.irs.gov/pub/epostcard/990/xml/2023/2023_TEOS_XML_02A.zip",
+   "bytes": 234617123
+  },
+  {
+   "name": "2023_TEOS_XML_03A.zip",
+   "url": "https://apps.irs.gov/pub/epostcard/990/xml/2023/2023_TEOS_XML_03A.zip",
+   "bytes": 197165153
+  },
+  {
+   "name": "2023_TEOS_XML_04A.zip",
+   "url": "https://apps.irs.gov/pub/epostcard/990/xml/2023/2023_TEOS_XML_04A.zip",
+   "bytes": 244491049
+  },
+  {
+   "name": "2023_TEOS_XML_05A.zip",
+   "url": "https://apps.irs.gov/pub/epostcard/990/xml/2023/2023_TEOS_XML_05A.zip",
+   "bytes": 990540072
+  },
+  {
+   "name": "2023_TEOS_XML_06A.zip",
+   "url": "https://apps.irs.gov/pub/epostcard/990/xml/2023/2023_TEOS_XML_06A.zip",
+   "bytes": 163716234
+  },
+  {
+   "name": "2023_TEOS_XML_07A.zip",
+   "url": "https://apps.irs.gov/pub/epostcard/990/xml/2023/2023_TEOS_XML_07A.zip",
+   "bytes": 219928555
+  },
+  {
+   "name": "2023_TEOS_XML_08A.zip",
+   "url": "https://apps.irs.gov/pub/epostcard/990/xml/2023/2023_TEOS_XML_08A.zip",
+   "bytes": 266247548
+  },
+  {
+   "name": "2023_TEOS_XML_09A.zip",
+   "url": "https://apps.irs.gov/pub/epostcard/990/xml/2023/2023_TEOS_XML_09A.zip",
+   "bytes": 200422523
+  },
+  {
+   "name": "2023_TEOS_XML_10A.zip",
+   "url": "https://apps.irs.gov/pub/epostcard/990/xml/2023/2023_TEOS_XML_10A.zip",
+   "bytes": 332505047
+  },
+  {
+   "name": "2023_TEOS_XML_11A.zip",
+   "url": "https://apps.irs.gov/pub/epostcard/990/xml/2023/2023_TEOS_XML_11A.zip",
+   "bytes": 1200256933
+  },
+  {
+   "name": "2023_TEOS_XML_12A.zip",
+   "url": "https://apps.irs.gov/pub/epostcard/990/xml/2023/2023_TEOS_XML_12A.zip",
+   "bytes": 120729513
+  }
+ ],
+ "2024": [
+  {
+   "name": "2024_TEOS_XML_01A.zip",
+   "url": "https://apps.irs.gov/pub/epostcard/990/xml/2024/2024_TEOS_XML_01A.zip",
+   "bytes": 104816571
+  },
+  {
+   "name": "2024_TEOS_XML_02A.zip",
+   "url": "https://apps.irs.gov/pub/epostcard/990/xml/2024/2024_TEOS_XML_02A.zip",
+   "bytes": 243689721
+  },
+  {
+   "name": "2024_TEOS_XML_03A.zip",
+   "url": "https://apps.irs.gov/pub/epostcard/990/xml/2024/2024_TEOS_XML_03A.zip",
+   "bytes": 209335079
+  },
+  {
+   "name": "2024_TEOS_XML_04A.zip",
+   "url": "https://apps.irs.gov/pub/epostcard/990/xml/2024/2024_TEOS_XML_04A.zip",
+   "bytes": 350268985
+  },
+  {
+   "name": "2024_TEOS_XML_05A.zip",
+   "url": "https://apps.irs.gov/pub/epostcard/990/xml/2024/2024_TEOS_XML_05A.zip",
+   "bytes": 977460330
+  },
+  {
+   "name": "2024_TEOS_XML_06A.zip",
+   "url": "https://apps.irs.gov/pub/epostcard/990/xml/2024/2024_TEOS_XML_06A.zip",
+   "bytes": 163872638
+  },
+  {
+   "name": "2024_TEOS_XML_07A.zip",
+   "url": "https://apps.irs.gov/pub/epostcard/990/xml/2024/2024_TEOS_XML_07A.zip",
+   "bytes": 288252859
+  },
+  {
+   "name": "2024_TEOS_XML_08A.zip",
+   "url": "https://apps.irs.gov/pub/epostcard/990/xml/2024/2024_TEOS_XML_08A.zip",
+   "bytes": 260603085
+  },
+  {
+   "name": "2024_TEOS_XML_09A.zip",
+   "url": "https://apps.irs.gov/pub/epostcard/990/xml/2024/2024_TEOS_XML_09A.zip",
+   "bytes": 247036759
+  },
+  {
+   "name": "2024_TEOS_XML_10A.zip",
+   "url": "https://apps.irs.gov/pub/epostcard/990/xml/2024/2024_TEOS_XML_10A.zip",
+   "bytes": 251614735
+  },
+  {
+   "name": "2024_TEOS_XML_11A.zip",
+   "url": "https://apps.irs.gov/pub/epostcard/990/xml/2024/2024_TEOS_XML_11A.zip",
+   "bytes": 1165636963
+  },
+  {
+   "name": "2024_TEOS_XML_12A.zip",
+   "url": "https://apps.irs.gov/pub/epostcard/990/xml/2024/2024_TEOS_XML_12A.zip",
+   "bytes": 128322545
+  }
+ ],
+ "2025": [
+  {
+   "name": "2025_TEOS_XML_01A.zip",
+   "url": "https://apps.irs.gov/pub/epostcard/990/xml/2025/2025_TEOS_XML_01A.zip",
+   "bytes": 103669610
+  },
+  {
+   "name": "2025_TEOS_XML_02A.zip",
+   "url": "https://apps.irs.gov/pub/epostcard/990/xml/2025/2025_TEOS_XML_02A.zip",
+   "bytes": 239929743
+  },
+  {
+   "name": "2025_TEOS_XML_03A.zip",
+   "url": "https://apps.irs.gov/pub/epostcard/990/xml/2025/2025_TEOS_XML_03A.zip",
+   "bytes": 222596630
+  },
+  {
+   "name": "2025_TEOS_XML_04A.zip",
+   "url": "https://apps.irs.gov/pub/epostcard/990/xml/2025/2025_TEOS_XML_04A.zip",
+   "bytes": 338249494
+  },
+  {
+   "name": "2025_TEOS_XML_05A.zip",
+   "url": "https://apps.irs.gov/pub/epostcard/990/xml/2025/2025_TEOS_XML_05A.zip",
+   "bytes": 495924982
+  },
+  {
+   "name": "2025_TEOS_XML_05B.zip",
+   "url": "https://apps.irs.gov/pub/epostcard/990/xml/2025/2025_TEOS_XML_05B.zip",
+   "bytes": 501021178
+  },
+  {
+   "name": "2025_TEOS_XML_06A.zip",
+   "url": "https://apps.irs.gov/pub/epostcard/990/xml/2025/2025_TEOS_XML_06A.zip",
+   "bytes": 246788129
+  },
+  {
+   "name": "2025_TEOS_XML_07A.zip",
+   "url": "https://apps.irs.gov/pub/epostcard/990/xml/2025/2025_TEOS_XML_07A.zip",
+   "bytes": 143450588
+  },
+  {
+   "name": "2025_TEOS_XML_08A.zip",
+   "url": "https://apps.irs.gov/pub/epostcard/990/xml/2025/2025_TEOS_XML_08A.zip",
+   "bytes": 262744207
+  },
+  {
+   "name": "2025_TEOS_XML_09A.zip",
+   "url": "https://apps.irs.gov/pub/epostcard/990/xml/2025/2025_TEOS_XML_09A.zip",
+   "bytes": 256276809
+  },
+  {
+   "name": "2025_TEOS_XML_10A.zip",
+   "url": "https://apps.irs.gov/pub/epostcard/990/xml/2025/2025_TEOS_XML_10A.zip",
+   "bytes": 56507372
+  },
+  {
+   "name": "2025_TEOS_XML_11A.zip",
+   "url": "https://apps.irs.gov/pub/epostcard/990/xml/2025/2025_TEOS_XML_11A.zip",
+   "bytes": 340137018
+  },
+  {
+   "name": "2025_TEOS_XML_11B.zip",
+   "url": "https://apps.irs.gov/pub/epostcard/990/xml/2025/2025_TEOS_XML_11B.zip",
+   "bytes": 494528498
+  },
+  {
+   "name": "2025_TEOS_XML_11C.zip",
+   "url": "https://apps.irs.gov/pub/epostcard/990/xml/2025/2025_TEOS_XML_11C.zip",
+   "bytes": 277886481
+  },
+  {
+   "name": "2025_TEOS_XML_11D.zip",
+   "url": "https://apps.irs.gov/pub/epostcard/990/xml/2025/2025_TEOS_XML_11D.zip",
+   "bytes": 332775121
+  },
+  {
+   "name": "2025_TEOS_XML_12A.zip",
+   "url": "https://apps.irs.gov/pub/epostcard/990/xml/2025/2025_TEOS_XML_12A.zip",
+   "bytes": 151835020
+  }
+ ],
+ "2026": [
+  {
+   "name": "2026_TEOS_XML_01A.zip",
+   "url": "https://apps.irs.gov/pub/epostcard/990/xml/2026/2026_TEOS_XML_01A.zip",
+   "bytes": 71497607
+  },
+  {
+   "name": "2026_TEOS_XML_02A.zip",
+   "url": "https://apps.irs.gov/pub/epostcard/990/xml/2026/2026_TEOS_XML_02A.zip",
+   "bytes": 222120272
+  },
+  {
+   "name": "2026_TEOS_XML_03A.zip",
+   "url": "https://apps.irs.gov/pub/epostcard/990/xml/2026/2026_TEOS_XML_03A.zip",
+   "bytes": 259338762
+  },
+  {
+   "name": "2026_TEOS_XML_04A.zip",
+   "url": "https://apps.irs.gov/pub/epostcard/990/xml/2026/2026_TEOS_XML_04A.zip",
+   "bytes": 261936622
+  },
+  {
+   "name": "2026_TEOS_XML_05A.zip",
+   "url": "https://apps.irs.gov/pub/epostcard/990/xml/2026/2026_TEOS_XML_05A.zip",
+   "bytes": 521158638
+  },
+  {
+   "name": "2026_TEOS_XML_05B.zip",
+   "url": "https://apps.irs.gov/pub/epostcard/990/xml/2026/2026_TEOS_XML_05B.zip",
+   "bytes": 513423358
+  },
+  {
+   "name": "2026_TEOS_XML_06A.zip",
+   "url": "https://apps.irs.gov/pub/epostcard/990/xml/2026/2026_TEOS_XML_06A.zip",
+   "bytes": 210803934
+  },
+  {
+   "name": "2026_TEOS_XML_07A.zip",
+   "url": "https://apps.irs.gov/pub/epostcard/990/xml/2026/2026_TEOS_XML_07A.zip",
+   "bytes": 189214345
+  },
+  {
+   "name": "2026_TEOS_XML_08A.zip",
+   "url": "https://apps.irs.gov/pub/epostcard/990/xml/2026/2026_TEOS_XML_08A.zip",
+   "bytes": 314704706
+  },
+  {
+   "name": "2026_TEOS_XML_09A.zip",
+   "url": "https://apps.irs.gov/pub/epostcard/990/xml/2026/2026_TEOS_XML_09A.zip",
+   "bytes": 201787829
+  }
+ ],
+ "2018": [
+  {
+   "name": "2018_TEOS_XML_CT1.zip",
+   "url": "https://apps.irs.gov/pub/epostcard/990/xml/2018/2018_TEOS_XML_CT1.zip",
+   "bytes": 408154337
+  },
+  {
+   "name": "2018_TEOS_XML_CT2.zip",
+   "url": "https://apps.irs.gov/pub/epostcard/990/xml/2018/2018_TEOS_XML_CT2.zip",
+   "bytes": 408862000
+  },
+  {
+   "name": "2018_TEOS_XML_CT3.zip",
+   "url": "https://apps.irs.gov/pub/epostcard/990/xml/2018/2018_TEOS_XML_CT3.zip",
+   "bytes": 420140132
+  },
+  {
+   "name": "download990xml_2018_1.zip",
+   "url": "https://apps.irs.gov/pub/epostcard/990/xml/2018/download990xml_2018_1.zip",
+   "bytes": 405852961
+  },
+  {
+   "name": "download990xml_2018_2.zip",
+   "url": "https://apps.irs.gov/pub/epostcard/990/xml/2018/download990xml_2018_2.zip",
+   "bytes": 402189942
+  },
+  {
+   "name": "download990xml_2018_3.zip",
+   "url": "https://apps.irs.gov/pub/epostcard/990/xml/2018/download990xml_2018_3.zip",
+   "bytes": 407493755
+  },
+  {
+   "name": "download990xml_2018_4.zip",
+   "url": "https://apps.irs.gov/pub/epostcard/990/xml/2018/download990xml_2018_4.zip",
+   "bytes": 404723587
+  },
+  {
+   "name": "download990xml_2018_5.zip",
+   "url": "https://apps.irs.gov/pub/epostcard/990/xml/2018/download990xml_2018_5.zip",
+   "bytes": 408094770
+  },
+  {
+   "name": "download990xml_2018_6.zip",
+   "url": "https://apps.irs.gov/pub/epostcard/990/xml/2018/download990xml_2018_6.zip",
+   "bytes": 406406859
+  },
+  {
+   "name": "download990xml_2018_7.zip",
+   "url": "https://apps.irs.gov/pub/epostcard/990/xml/2018/download990xml_2018_7.zip",
+   "bytes": 301672836
+  }
+ ]
+}

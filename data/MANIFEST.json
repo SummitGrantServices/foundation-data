@@ -1,0 +1,1981 @@
+{
+ "generated": "2026-11-13T11:48:18Z",
+ "database_build_date": "2026-11-12",
+ "compression": "zstd",
+ "n_files": 315,
+ "total_bytes": 1358777693,
+ "max_file_bytes": 39462026,
+ "tables": {
+  "foundations": {
+   "files": 1,
+   "bytes": 32438112,
+   "rows": 165592
+  },
+  "grants_all": {
+   "files": 62,
+   "bytes": 776462647,
+   "rows": 20181044
+  },
+  "index/funder_directory": {
+   "files": 1,
+   "bytes": 9539403,
+   "rows": 258914
+  },
+  "index/funder_profiles": {
+   "files": 15,
+   "bytes": 195003191,
+   "rows": 258914
+  },
+  "index/grants": {
+   "files": 57,
+   "bytes": 135971021,
+   "rows": 20104028
+  },
+  "index/index": {
+   "files": 1,
+   "bytes": 87984,
+   "rows": 0
+  },
+  "index/purposes": {
+   "files": 57,
+   "bytes": 46402693,
+   "rows": 2583483
+  },
+  "index/recipient_eins": {
+   "files": 1,
+   "bytes": 15254104,
+   "rows": 1987660
+  },
+  "index/recipient_info": {
+   "files": 57,
+   "bytes": 59774916,
+   "rows": 3925372
+  },
+  "index/recipient_keys": {
+   "files": 57,
+   "bytes": 37155268,
+   "rows": 3925372
+  },
+  "meta": {
+   "files": 1,
+   "bytes": 5801,
+   "rows": 41
+  },
+  "pc_funders": {
+   "files": 1,
+   "bytes": 17334620,
+   "rows": 93322
+  },
+  "pf_app_info": {
+   "files": 1,
+   "bytes": 7942559,
+   "rows": 229675
+  },
+  "pf_officers": {
+   "files": 1,
+   "bytes": 25393328,
+   "rows": 2922561
+  },
+  "qa_completeness": {
+   "files": 1,
+   "bytes": 2294,
+   "rows": 9
+  },
+  "subject_tags": {
+   "files": 1,
+   "bytes": 9752,
+   "rows": 23
+  }
+ },
+ "files": [
+  {
+   "file": "foundations.parquet",
+   "bytes": 32438112,
+   "sha256": "4c2afba37db73875face58b0b152e0ac6e3b28c4d8f40b4b5f1bb327a2f3adb1",
+   "rows": 165592
+  },
+  {
+   "file": "grants_all/AK.parquet",
+   "bytes": 1835927,
+   "sha256": "16e73b4b4b0d31fa19ca7889a8f0113f8391df4f9267de7a6c82fb53c6e2de20",
+   "rows": 60722
+  },
+  {
+   "file": "grants_all/AL.parquet",
+   "bytes": 6450962,
+   "sha256": "4cd994fd1a17c511afb40deeff90c367e950d2474e9863f84ff4475cb6714a12",
+   "rows": 191022
+  },
+  {
+   "file": "grants_all/AR.parquet",
+   "bytes": 3194619,
+   "sha256": "4598f81183ff026f0714abcd5e96196976913e4bfc7caa483b18f35fe0c83ea7",
+   "rows": 95977
+  },
+  {
+   "file": "grants_all/AS.parquet",
+   "bytes": 15457,
+   "sha256": "cfded68ad3e261af358ab16d755c5303bf10d70a0087a931ed671cd4a271f966",
+   "rows": 133
+  },
+  {
+   "file": "grants_all/AZ.parquet",
+   "bytes": 9661542,
+   "sha256": "5aac5dcbae79be8e679f9bc37aee345c228c27f4836613f88478f91dc4d34015",
+   "rows": 270222
+  },
+  {
+   "file": "grants_all/CA_01.parquet",
+   "bytes": 31311922,
+   "sha256": "a7fdb6c1d1394d532a64209b73e0037b614e94fcdab31d4cedc43d75538b94ee",
+   "rows": 709531
+  },
+  {
+   "file": "grants_all/CA_02.parquet",
+   "bytes": 29945361,
+   "sha256": "b8030656a1d79430da3c67867ddea9ff0c643ddc4f7470dd91eac5a951e219b3",
+   "rows": 709531
+  },
+  {
+   "file": "grants_all/CA_03.parquet",
+   "bytes": 30318687,
+   "sha256": "ded241d2dbdba1d60fb9fca308e78beb4f20965a88cd4ab94f112149917b5e31",
+   "rows": 709531
+  },
+  {
+   "file": "grants_all/CO.parquet",
+   "bytes": 18271044,
+   "sha256": "fb376eb470c7600c54cdfc6c7e5f471ac7b04f2cb4d9cac71b8ebcb8f112362c",
+   "rows": 480285
+  },
+  {
+   "file": "grants_all/CT.parquet",
+   "bytes": 12407769,
+   "sha256": "2d5abeddf06fb510d28c25f1fcf271923f76a788158462cd88ea00ff3a0db2dd",
+   "rows": 350586
+  },
+  {
+   "file": "grants_all/DC.parquet",
+   "bytes": 19844633,
+   "sha256": "193a2179a5735630ac317bcc8aa2a3318bfb4c36bb1bd7ff1563f286e472bdc8",
+   "rows": 538516
+  },
+  {
+   "file": "grants_all/DE.parquet",
+   "bytes": 1744004,
+   "sha256": "eb227ec6846c0e95447f3f7593354ea043bd6e01b0dc140a5cdfb8b3f444fd2c",
+   "rows": 55529
+  },
+  {
+   "file": "grants_all/FL.parquet",
+   "bytes": 39462026,
+   "sha256": "49d8448e4a4c83fed741d3e5a916c5302a030214ff30e82e1ae27ca738f75c2c",
+   "rows": 941056
+  },
+  {
+   "file": "grants_all/GA.parquet",
+   "bytes": 17757007,
+   "sha256": "0ef9b28668e39cecf3b931669defd4599d1ba1697b6e80ca7c32eac8d4636c2d",
+   "rows": 472142
+  },
+  {
+   "file": "grants_all/GU.parquet",
+   "bytes": 32969,
+   "sha256": "46431531313bb52976464a90dfc501cfc92503448413e13ad53014424afb2f65",
+   "rows": 476
+  },
+  {
+   "file": "grants_all/HI.parquet",
+   "bytes": 2770444,
+   "sha256": "afec5ea45c042f6f975fe79a99ad71ec2b0c1e20129146c0b096d3cc59cdb5a8",
+   "rows": 82668
+  },
+  {
+   "file": "grants_all/IA.parquet",
+   "bytes": 8178883,
+   "sha256": "e13762b7c1f5a9d2018174ab5b5cc240e0f585921e534de82f75dc9654da136a",
+   "rows": 234192
+  },
+  {
+   "file": "grants_all/ID.parquet",
+   "bytes": 2851768,
+   "sha256": "460234a58e1137d61902868808966d1eb34617845a2c752f02c66ac24f83e59c",
+   "rows": 85331
+  },
+  {
+   "file": "grants_all/IL.parquet",
+   "bytes": 32795335,
+   "sha256": "87862b845550f9ffacd7001c8c35ed2522ac19a1df38f0c454c4e65eaf756daa",
+   "rows": 823432
+  },
+  {
+   "file": "grants_all/IN.parquet",
+   "bytes": 12685244,
+   "sha256": "d5ba67b66aa06a97ad931d86fc359a98a251f47df5440e49426dc1c7c52d5965",
+   "rows": 346506
+  },
+  {
+   "file": "grants_all/KS.parquet",
+   "bytes": 6108187,
+   "sha256": "25ca446b50c7dff165bc8b4c18de8d40fd3b028bd6c65a0bc74702ede414cdd0",
+   "rows": 174273
+  },
+  {
+   "file": "grants_all/KY.parquet",
+   "bytes": 6279967,
+   "sha256": "ebc6c805e43bab93d2e61c60536aa2caa769243c3ba21500a2bc3f06f7f5dbaa",
+   "rows": 183739
+  },
+  {
+   "file": "grants_all/LA.parquet",
+   "bytes": 5539163,
+   "sha256": "ec6695dd390d189f929b806db6bf17e8e572a2b940009de1bb4fd8a79dd435e5",
+   "rows": 160135
+  },
+  {
+   "file": "grants_all/MA.parquet",
+   "bytes": 32652025,
+   "sha256": "ef6a4f784c4b86b1a6e7e8ba88d8ee91a0073ea85e053dc054cf92508a7be3f5",
+   "rows": 836845
+  },
+  {
+   "file": "grants_all/MD.parquet",
+   "bytes": 15149297,
+   "sha256": "cf746341a537104172a7efedd8ff7309b78c16535510e7e55ffe13772615051f",
+   "rows": 401131
+  },
+  {
+   "file": "grants_all/ME.parquet",
+   "bytes": 5150307,
+   "sha256": "a4c7ce1078d31f1299be1e2931f88ae3589db14cb2c25f05abaa0dc54ec2dadb",
+   "rows": 150923
+  },
+  {
+   "file": "grants_all/MI.parquet",
+   "bytes": 20105485,
+   "sha256": "1d515cdb476da2a2e600dcf4807e6b03d757f161702f1254053471f737bdcfb2",
+   "rows": 526309
+  },
+  {
+   "file": "grants_all/MN.parquet",
+   "bytes": 16781490,
+   "sha256": "1ae1d704b290194aefdcf35171c1ad3bb73f0ce823740d3a969d0c890377b10c",
+   "rows": 451763
+  },
+  {
+   "file": "grants_all/MO.parquet",
+   "bytes": 12629301,
+   "sha256": "dfe5664c9ddb924425f1d3cd8044835799f3ff3127bca29bc7e626db24431889",
+   "rows": 347798
+  },
+  {
+   "file": "grants_all/MP.parquet",
+   "bytes": 19031,
+   "sha256": "40b2dcde74cc45f07c46feec86be5f922648d69b6d8c922c9781611dce20231b",
+   "rows": 189
+  },
+  {
+   "file": "grants_all/MS.parquet",
+   "bytes": 2368502,
+   "sha256": "cd566b014eb774d270cbfd6efada4631223bb7ecd39183374e5339716ea2bcc9",
+   "rows": 70667
+  },
+  {
+   "file": "grants_all/MT.parquet",
+   "bytes": 3776580,
+   "sha256": "83d9ab83bf74dbed2ce29864c72c8daa3e7109e824e84dcdea1d7b6637461bb2",
+   "rows": 112331
+  },
+  {
+   "file": "grants_all/NC.parquet",
+   "bytes": 21363791,
+   "sha256": "e7488306c6b36d3eb3a8170a286216698243084a8baf01a196b102de7251b67c",
+   "rows": 557758
+  },
+  {
+   "file": "grants_all/ND.parquet",
+   "bytes": 1433747,
+   "sha256": "a0f3cfd52a40051ad07df00e6c7341ee74bf253f059245f2c2e1ea8173aa453b",
+   "rows": 43169
+  },
+  {
+   "file": "grants_all/NE.parquet",
+   "bytes": 4366714,
+   "sha256": "a2eb5d32c1dbb884bca6e11c116b9f9f4a4361779a7201f968abc38b51f5f0ad",
+   "rows": 133229
+  },
+  {
+   "file": "grants_all/NH.parquet",
+   "bytes": 3621035,
+   "sha256": "bc3a43d7fb900a41eafac60baa6ef420be7f33facea78ee774dd9b0c7bb4f6ca",
+   "rows": 109739
+  },
+  {
+   "file": "grants_all/NJ.parquet",
+   "bytes": 18766291,
+   "sha256": "ffe12e362c1b9291c17d5ef100c7b55786246c5e56e6514e2d3de2c70854a7ac",
+   "rows": 510544
+  },
+  {
+   "file": "grants_all/NM.parquet",
+   "bytes": 3193671,
+   "sha256": "df438d6c3e8aefc827b1ff58c9d2d604bfb44955551fb953175a5506e29119dc",
+   "rows": 97141
+  },
+  {
+   "file": "grants_all/NV.parquet",
+   "bytes": 2525116,
+   "sha256": "a4cdc9772f3bb5cef89141834d0ae50ffcfb208d30a83b43048bf4356178a2ad",
+   "rows": 77621
+  },
+  {
+   "file": "grants_all/NY_01.parquet",
+   "bytes": 29488425,
+   "sha256": "e821dead20dd6a2978106b6750e3d92d924734d5d6aa2ed49b363ce8f0165469",
+   "rows": 708358
+  },
+  {
+   "file": "grants_all/NY_02.parquet",
+   "bytes": 29116601,
+   "sha256": "b73870c6441fdd682916bf69479db90e341bd577a002fd4bf0d8b6131346f07d",
+   "rows": 708358
+  },
+  {
+   "file": "grants_all/NY_03.parquet",
+   "bytes": 28275676,
+   "sha256": "25447df7516137cf2f88958cf53910f84672f33f60a8db3f4e07451e7d36035a",
+   "rows": 708357
+  },
+  {
+   "file": "grants_all/OH.parquet",
+   "bytes": 25716864,
+   "sha256": "472236db9aef72c6aea51196b52304fa5d62127b120bd85e93648e5a71386a22",
+   "rows": 668955
+  },
+  {
+   "file": "grants_all/OK.parquet",
+   "bytes": 5704386,
+   "sha256": "5e9273dac8c33a7d173807a8c967c37c6ad2022957eed2cec7b041053c39e81b",
+   "rows": 168149
+  },
+  {
+   "file": "grants_all/OR.parquet",
+   "bytes": 10334924,
+   "sha256": "08f7096c0adbca88ee22b4db2be4a4668deef2decdaa0379ebbe9fc2fd436fff",
+   "rows": 288236
+  },
+  {
+   "file": "grants_all/PA.parquet",
+   "bytes": 35929660,
+   "sha256": "73a6604d59268afb25a67f9f82afe34754da085054e99596eedb57918e066f19",
+   "rows": 869593
+  },
+  {
+   "file": "grants_all/PR.parquet",
+   "bytes": 570181,
+   "sha256": "a8acc3bab0de1919f2c4102b0d36e06e2ad1dce5cffb77a18f1688b6584d8a05",
+   "rows": 14493
+  },
+  {
+   "file": "grants_all/RI.parquet",
+   "bytes": 3060377,
+   "sha256": "1ff6779ca3bda070fcf3389c87ab1152fc7c841abd107a4490f571ce2048dfbc",
+   "rows": 102501
+  },
+  {
+   "file": "grants_all/SC.parquet",
+   "bytes": 6575717,
+   "sha256": "990ea504695821db8f0046bc416743a635c77d5a1cf8dd284a2ab00c092b8e8f",
+   "rows": 194559
+  },
+  {
+   "file": "grants_all/SD.parquet",
+   "bytes": 1739515,
+   "sha256": "0134d2f2970c9f7aff4acf3ed73263b2f065f5f4b7ff73f75a1171a8673631ba",
+   "rows": 52040
+  },
+  {
+   "file": "grants_all/TN.parquet",
+   "bytes": 12947906,
+   "sha256": "0ccc8e7de18f66b20e70da98c6b08c8e4f5f40ce0eeed9280dcd18066b1d956f",
+   "rows": 367285
+  },
+  {
+   "file": "grants_all/TX_01.parquet",
+   "bytes": 23243320,
+   "sha256": "02d56f9cc779a048cd54c49d1004e5b022f7dbea68191e552145955513139488",
+   "rows": 567193
+  },
+  {
+   "file": "grants_all/TX_02.parquet",
+   "bytes": 22850847,
+   "sha256": "0732e0ff82f09bcbb11fed479ed3c30b5c1a97c3c7b70079fb25fec50f53fb7b",
+   "rows": 567193
+  },
+  {
+   "file": "grants_all/UT.parquet",
+   "bytes": 4230365,
+   "sha256": "e2f4d9bd1dd7f134dd9c5a098fb7e1e40901359a62b3f13c0ac7a3d70166a5ec",
+   "rows": 129581
+  },
+  {
+   "file": "grants_all/VA.parquet",
+   "bytes": 22933964,
+   "sha256": "992a3e0eb6d99090cfc4792409fe208c88882589d14df729a4ba9420c3c961f9",
+   "rows": 574265
+  },
+  {
+   "file": "grants_all/VI.parquet",
+   "bytes": 130024,
+   "sha256": "b5a9ffdb2ffb992b5ed4c1aa6569cb7780b0658c746593f1a437751f5ba326db",
+   "rows": 2995
+  },
+  {
+   "file": "grants_all/VT.parquet",
+   "bytes": 2997023,
+   "sha256": "5b3c5574665d38fbfce941e362c2f03f547ea91595eae3c7a90d5d785461c9e0",
+   "rows": 91797
+  },
+  {
+   "file": "grants_all/WA.parquet",
+   "bytes": 17251744,
+   "sha256": "590d610b1f1ed7d3dffe0aba1ed881ba140e7dca035ecc9cac7173362d2c410d",
+   "rows": 481083
+  },
+  {
+   "file": "grants_all/WI.parquet",
+   "bytes": 13936310,
+   "sha256": "7e7090b4140caac4b8ba106fa77f17405a824f72c8c51743777d50ee068dcffb",
+   "rows": 394904
+  },
+  {
+   "file": "grants_all/WV.parquet",
+   "bytes": 2645511,
+   "sha256": "cc7d5c222c5b15ccb6f0cc3ed69562030c25e52c327910b3c0d3f21c53634f20",
+   "rows": 78704
+  },
+  {
+   "file": "grants_all/WY.parquet",
+   "bytes": 1584182,
+   "sha256": "7a1abf1d3f3d460fdd8deec525830e2f685617cfb97c5ae2888a48e8547693c3",
+   "rows": 49238
+  },
+  {
+   "file": "grants_all/XX.parquet",
+   "bytes": 11833822,
+   "sha256": "f04244cd726307056e7bc380b4af2e9ecaac4a32d09a64b4520fa09bff92f501",
+   "rows": 290515
+  },
+  {
+   "file": "index/funder_directory.parquet",
+   "bytes": 9539403,
+   "sha256": "97934364f6ef1b64c6caf8a619ffb6e538750bda5e2415ae0083641b3d7a1239",
+   "rows": 258914
+  },
+  {
+   "file": "index/funder_profiles/p_01.parquet",
+   "bytes": 15145537,
+   "sha256": "211af18a1c757cf0d064127816d21e2ade13da02c5957de695fbb945b9e818ba",
+   "rows": 18000
+  },
+  {
+   "file": "index/funder_profiles/p_02.parquet",
+   "bytes": 16219069,
+   "sha256": "c054206dbb06fd66f1c0bbf35e1a5e8b24b930b12114411da6a5891f3e17cf64",
+   "rows": 18000
+  },
+  {
+   "file": "index/funder_profiles/p_03.parquet",
+   "bytes": 14108016,
+   "sha256": "5ed7519a8c5413c6d3e1cdaa88b0abc3b62f14dfe526d69fb44b693d09f9958d",
+   "rows": 18000
+  },
+  {
+   "file": "index/funder_profiles/p_04.parquet",
+   "bytes": 15701918,
+   "sha256": "2df490d9ebd1e8d71d3057d1cc8e318197c6d98d15da6c2255f7da543fe2a93a",
+   "rows": 18000
+  },
+  {
+   "file": "index/funder_profiles/p_05.parquet",
+   "bytes": 12832431,
+   "sha256": "07bab7a19427c9b32b5547a862d279787ef1db7b1deb14ea70e28828fc323804",
+   "rows": 18000
+  },
+  {
+   "file": "index/funder_profiles/p_06.parquet",
+   "bytes": 11581047,
+   "sha256": "cf4359d3f50c89731eab87d01a59bcdebcb40f5d7c41015d30fae766884c161c",
+   "rows": 18000
+  },
+  {
+   "file": "index/funder_profiles/p_07.parquet",
+   "bytes": 13986857,
+   "sha256": "0c252e4697ece9bccabfc3633c16f037f72fcff8988d50e1c23c7c353c681fc4",
+   "rows": 18000
+  },
+  {
+   "file": "index/funder_profiles/p_08.parquet",
+   "bytes": 15026208,
+   "sha256": "141c53b9c9e7b792e98b307d7b324c342bffd912ee9f51d087d0dc274d25340d",
+   "rows": 18000
+  },
+  {
+   "file": "index/funder_profiles/p_09.parquet",
+   "bytes": 14348525,
+   "sha256": "1643d17fd07143276e424f6ebbf768e0daf13422c6e3ce85185bfabb7f792f5f",
+   "rows": 18000
+  },
+  {
+   "file": "index/funder_profiles/p_10.parquet",
+   "bytes": 14742827,
+   "sha256": "412b301d98f668f2ea3c2d6c5ebac11b4051aa8e5f2ebea240b72b09cc0deed9",
+   "rows": 18000
+  },
+  {
+   "file": "index/funder_profiles/p_11.parquet",
+   "bytes": 13511668,
+   "sha256": "83c7ac4b7c90b87297a982f50e60294979c09257abd36ba120fafd968f58ff09",
+   "rows": 18000
+  },
+  {
+   "file": "index/funder_profiles/p_12.parquet",
+   "bytes": 12389140,
+   "sha256": "062f7a2c8a77ecdc3f3da9da8063fe09e05b5cf11086f77753a5cb8f89a16056",
+   "rows": 18000
+  },
+  {
+   "file": "index/funder_profiles/p_13.parquet",
+   "bytes": 11372441,
+   "sha256": "ea58998412ac119b7dea3abe63870f8f8c224868771e31d5e72dcdab5d9f0746",
+   "rows": 18000
+  },
+  {
+   "file": "index/funder_profiles/p_14.parquet",
+   "bytes": 11244327,
+   "sha256": "ff416b9574ed4b5282fe7d8209e2f471f55fd5f4a07b325b0189d9727c3f8ecb",
+   "rows": 18000
+  },
+  {
+   "file": "index/funder_profiles/p_15.parquet",
+   "bytes": 2793180,
+   "sha256": "3c17d24f499a3afaf856293316a2de654465f5271b876160c56292f04b5058f4",
+   "rows": 6914
+  },
+  {
+   "file": "index/grants/AK.parquet",
+   "bytes": 414793,
+   "sha256": "42b82e50eae64fe1a50d1b12ebd6287d003fe9b1c620a5bac785f33bedb81e58",
+   "rows": 60492
+  },
+  {
+   "file": "index/grants/AL.parquet",
+   "bytes": 1255853,
+   "sha256": "70f17d9bf6fa96eebe9f9b38fa51bf548588feea872ab2dd5f772721b786c6c9",
+   "rows": 190367
+  },
+  {
+   "file": "index/grants/AR.parquet",
+   "bytes": 654460,
+   "sha256": "384a0108db66481b00f0bd3a50cb2e208bd223be41aa519b8386d0dc1d3ed83e",
+   "rows": 95730
+  },
+  {
+   "file": "index/grants/AS.parquet",
+   "bytes": 2621,
+   "sha256": "b86b048f509de019176bf498863818fe4a3375bd1f510e2eeb34c9e2af971011",
+   "rows": 132
+  },
+  {
+   "file": "index/grants/AZ.parquet",
+   "bytes": 1839663,
+   "sha256": "a684fbce9ebc3b33ee0bce2d815c61711fd137ac1c49a165d5d5688c04e392d3",
+   "rows": 269138
+  },
+  {
+   "file": "index/grants/CA.parquet",
+   "bytes": 14816224,
+   "sha256": "449f2bd05b2a0b440125e5ebff394f23f8a472b427af8c1f6513364a593b7af6",
+   "rows": 2124848
+  },
+  {
+   "file": "index/grants/CO.parquet",
+   "bytes": 3272257,
+   "sha256": "a4f38e8c3792f79bec643ca50ccb631d9c0a1989c0e5281fec629ed8ea3eea69",
+   "rows": 479197
+  },
+  {
+   "file": "index/grants/CT.parquet",
+   "bytes": 2205762,
+   "sha256": "b739787b55ac6abbf03b2cb14929252f8fd08ade13eb325113d6aa7ea14ae7b6",
+   "rows": 349673
+  },
+  {
+   "file": "index/grants/DC.parquet",
+   "bytes": 3444686,
+   "sha256": "bd8b42b2b42b4fee053f1cde155d3e60c422c7d37576946d3ee28915aa35114c",
+   "rows": 537200
+  },
+  {
+   "file": "index/grants/DE.parquet",
+   "bytes": 366837,
+   "sha256": "534c46c3b73fe60516a631c5ccb5ab265432d31674c645fa13b306bc759d18ea",
+   "rows": 55410
+  },
+  {
+   "file": "index/grants/FL.parquet",
+   "bytes": 6422095,
+   "sha256": "1ce1f033ddef6e298acf0f24d7decd4fabd7026ddd564bf96ff924808e2abebd",
+   "rows": 938197
+  },
+  {
+   "file": "index/grants/GA.parquet",
+   "bytes": 3214964,
+   "sha256": "76b532e211f358a3a0e7b51572df485f4788a0f9f57f9b1770e6d3a83ea8dfcd",
+   "rows": 471075
+  },
+  {
+   "file": "index/grants/GU.parquet",
+   "bytes": 5688,
+   "sha256": "5e5bce8d27651bf02caf9df3ac002bee624d688b68482888990774ce58a2cb71",
+   "rows": 475
+  },
+  {
+   "file": "index/grants/HI.parquet",
+   "bytes": 567483,
+   "sha256": "72a8b99c33d53f7be9ef14b039d4a6ad93abc6a80c485012ab63a7501d34350c",
+   "rows": 82380
+  },
+  {
+   "file": "index/grants/IA.parquet",
+   "bytes": 1568600,
+   "sha256": "d1ee280551f907609fe6be7b080eb16887672d76d991fb78a7af870151e1a5e2",
+   "rows": 233453
+  },
+  {
+   "file": "index/grants/ID.parquet",
+   "bytes": 588172,
+   "sha256": "491a18fb322c141ea0ddfe820cbe482aa1988163491924e7e926fdd8dbe954a8",
+   "rows": 85195
+  },
+  {
+   "file": "index/grants/IL.parquet",
+   "bytes": 5480474,
+   "sha256": "b904dee0ef4a8139c005e7af3bd1f207076f903292659c6f07e158da549900ff",
+   "rows": 820835
+  },
+  {
+   "file": "index/grants/IN.parquet",
+   "bytes": 2386330,
+   "sha256": "adef1306434d98543f46dca2cf6090ceab08e95dd142c08903c8c5814e537a1b",
+   "rows": 345848
+  },
+  {
+   "file": "index/grants/KS.parquet",
+   "bytes": 1191759,
+   "sha256": "0b081d087e554c37970f4c7bd5231a444552eaab710dadb4e5cc1615d651a794",
+   "rows": 173731
+  },
+  {
+   "file": "index/grants/KY.parquet",
+   "bytes": 1259347,
+   "sha256": "78b7f201885706a9275e0d6c2c45ee47e521e4f3636246d6b6ee751d795a73a7",
+   "rows": 183351
+  },
+  {
+   "file": "index/grants/LA.parquet",
+   "bytes": 1114240,
+   "sha256": "396822d274e0578175a6cb7caa93fe99d45258677c99323fea39a42a135f8465",
+   "rows": 159654
+  },
+  {
+   "file": "index/grants/MA.parquet",
+   "bytes": 5390171,
+   "sha256": "cf82d62d467f83c07b896f03be1d530a80752e0ee5e06ffc9b35a2df720cd3d1",
+   "rows": 835100
+  },
+  {
+   "file": "index/grants/MD.parquet",
+   "bytes": 2682531,
+   "sha256": "c425f58450ea2acbdb3b21b22659d959cd1ed78c5c7b4843dfe8dd002ff56a5b",
+   "rows": 400065
+  },
+  {
+   "file": "index/grants/ME.parquet",
+   "bytes": 970357,
+   "sha256": "76a9c823a11d8ba419fb71d1a07239ee4059f2242ee72542ab94c8d92891ad6d",
+   "rows": 150591
+  },
+  {
+   "file": "index/grants/MI.parquet",
+   "bytes": 3607943,
+   "sha256": "02716068a82e2f0d6876c580a8c4deee416e5af99836ee7a4ca77c2a8028d3a6",
+   "rows": 525143
+  },
+  {
+   "file": "index/grants/MN.parquet",
+   "bytes": 3079644,
+   "sha256": "e65834f349616c56ee3f4682f84548572193032b84ef7259d65891b5bbe1de6d",
+   "rows": 450484
+  },
+  {
+   "file": "index/grants/MO.parquet",
+   "bytes": 2359970,
+   "sha256": "351f518adaec6fdcd26aef75c2cf012c50ff5020943c86390f68a6e0728796cf",
+   "rows": 347091
+  },
+  {
+   "file": "index/grants/MP.parquet",
+   "bytes": 3262,
+   "sha256": "410fb1850cf2744d38b5eb0077d3adf3c4ee3c2416a2a0fd19242185b27478df",
+   "rows": 188
+  },
+  {
+   "file": "index/grants/MS.parquet",
+   "bytes": 498277,
+   "sha256": "a1a6ba0f7c889e7579115cc34b2f39bfaa494a139f327db76609aa712e611bc0",
+   "rows": 70408
+  },
+  {
+   "file": "index/grants/MT.parquet",
+   "bytes": 743962,
+   "sha256": "97cc34bcbac4216ec58db0dd937c10276fff70719a34ad7d94c1388ccba8f321",
+   "rows": 112081
+  },
+  {
+   "file": "index/grants/NC.parquet",
+   "bytes": 3736808,
+   "sha256": "fff2bdc5fc49349e8602e9390cd95d495ecbb33260b5253a9686a60ce8f3c0d5",
+   "rows": 556183
+  },
+  {
+   "file": "index/grants/ND.parquet",
+   "bytes": 317787,
+   "sha256": "ad3c5c8b394141e5df5f4c8a8f007899669c72d2dedb8606cdb5e5b51a6b6b1d",
+   "rows": 43032
+  },
+  {
+   "file": "index/grants/NE.parquet",
+   "bytes": 868572,
+   "sha256": "6ab96f3cdb032381d1ba82e268da6816ca3d1e0887e4aff8a9640f57f51be107",
+   "rows": 132744
+  },
+  {
+   "file": "index/grants/NH.parquet",
+   "bytes": 714113,
+   "sha256": "848cea0ce6c4eec14f92817d0499f50139b19c1246590cf36aaefdbabcad63f6",
+   "rows": 109583
+  },
+  {
+   "file": "index/grants/NJ.parquet",
+   "bytes": 3311659,
+   "sha256": "35ee397d8b162fb2586b00d9f5dd7d4deb1d88d5d90188a2b17ee5f9282e9cf3",
+   "rows": 508549
+  },
+  {
+   "file": "index/grants/NM.parquet",
+   "bytes": 668269,
+   "sha256": "d939c34b41012e8e08a8aef2f19eca504f83ecabbc5f4798a8e1e7c2f63fac29",
+   "rows": 96970
+  },
+  {
+   "file": "index/grants/NV.parquet",
+   "bytes": 546405,
+   "sha256": "17adf1e592c18cdb573f3cc0e08e63dc9d0ebd51a0cbfe5f1fae96f7a5bb86d6",
+   "rows": 77394
+  },
+  {
+   "file": "index/grants/NY.parquet",
+   "bytes": 13914924,
+   "sha256": "a9f271e2c69115993ff6d9e6493c7e90665081a57b435bdf6e1703ef16dc66be",
+   "rows": 2117139
+  },
+  {
+   "file": "index/grants/OH.parquet",
+   "bytes": 4517493,
+   "sha256": "86a1507cb7bd6f77c6d0b9901f359122b85fa6b9a997b874ebdab193bc17ab13",
+   "rows": 666870
+  },
+  {
+   "file": "index/grants/OK.parquet",
+   "bytes": 1135933,
+   "sha256": "b11cae5eddca81a92834142367f2574c7939486050a1a1a14a198846a7f20e9a",
+   "rows": 167305
+  },
+  {
+   "file": "index/grants/OR.parquet",
+   "bytes": 1986880,
+   "sha256": "dc8ec7039f4c090d9aa34853dff27a193f1a5f1af9a8efdac228afe81ca4780f",
+   "rows": 287739
+  },
+  {
+   "file": "index/grants/PA.parquet",
+   "bytes": 5886402,
+   "sha256": "f097a6521f1188de1de8247da7b2673615d3e5cd44002d92fb4fcde149653d8b",
+   "rows": 867115
+  },
+  {
+   "file": "index/grants/PR.parquet",
+   "bytes": 120920,
+   "sha256": "0ee8402f1e1454640e944ff7262e049f87680003facc53c3f2e0687500e95f62",
+   "rows": 14478
+  },
+  {
+   "file": "index/grants/RI.parquet",
+   "bytes": 628566,
+   "sha256": "0274b60eadbf27400c6b2ca8b9df8109c79811e1ce90a31dc7e3e6bf432c86b0",
+   "rows": 102225
+  },
+  {
+   "file": "index/grants/SC.parquet",
+   "bytes": 1304277,
+   "sha256": "01c1d0dbe10bb7e68a954a0ab9e67caf79ad3009c4e80261eab572532dd61966",
+   "rows": 193984
+  },
+  {
+   "file": "index/grants/SD.parquet",
+   "bytes": 361386,
+   "sha256": "0135f0e9103e3b642e3e3a782a34f52017c93c5ee6fd9c008058b6faeaf5a3cb",
+   "rows": 51934
+  },
+  {
+   "file": "index/grants/TN.parquet",
+   "bytes": 2362371,
+   "sha256": "8841676480036c5747d798bd31a4fadbd2719b1b2f13d03d14bdde962032c8cd",
+   "rows": 366434
+  },
+  {
+   "file": "index/grants/TX.parquet",
+   "bytes": 7871362,
+   "sha256": "38a35bb10d7b1d6c6bb23674c6d3bc4fc0007a45457a4f422d02c4269e84f3ae",
+   "rows": 1130452
+  },
+  {
+   "file": "index/grants/UT.parquet",
+   "bytes": 864059,
+   "sha256": "649f1c5d063993d12c2e7d6e597153cd03de1d1df4f301e1a7191161ac71c112",
+   "rows": 129228
+  },
+  {
+   "file": "index/grants/VA.parquet",
+   "bytes": 3809284,
+   "sha256": "298e66bf9f44cfaf63fba8ff0fe3ef82189331051d5129b8cd52727fe8c337a9",
+   "rows": 572891
+  },
+  {
+   "file": "index/grants/VI.parquet",
+   "bytes": 25035,
+   "sha256": "f211295c92997171d6bbb0c0112b77ec2314beb61210f20001655b55848280ac",
+   "rows": 2987
+  },
+  {
+   "file": "index/grants/VT.parquet",
+   "bytes": 600835,
+   "sha256": "3a0d2c385003b2e2db4c73dfa90f1bc8771cb0fc78d0354c7f9082c5bb3cde73",
+   "rows": 91652
+  },
+  {
+   "file": "index/grants/WA.parquet",
+   "bytes": 3264782,
+   "sha256": "e217d294fb8c349e12c7b02b6de2c94547cf378588771c36fbb78abab1d39bc4",
+   "rows": 480339
+  },
+  {
+   "file": "index/grants/WI.parquet",
+   "bytes": 2601811,
+   "sha256": "64239d6f13de14a92cb9187b90cb5966903fb0b6901b2d3cae25a0000ac316a7",
+   "rows": 394188
+  },
+  {
+   "file": "index/grants/WV.parquet",
+   "bytes": 541347,
+   "sha256": "2c85a6f8090ee209dadc7e01d50f551d5cdcde33b0f016306818b5f45a7f1923",
+   "rows": 78447
+  },
+  {
+   "file": "index/grants/WY.parquet",
+   "bytes": 325486,
+   "sha256": "44dcc9d6822dfa62501c42801f831371bd30dfb5b85e1061645048d8e62e77c1",
+   "rows": 49012
+  },
+  {
+   "file": "index/grants/XX.parquet",
+   "bytes": 2275830,
+   "sha256": "e13ba4192bb43e705287ee29d364f23e406a0a6838a627a8ab1118e1e00504dc",
+   "rows": 267622
+  },
+  {
+   "file": "index/index.json",
+   "bytes": 87984,
+   "sha256": "f0a66c5d3ef65343218ff62746a484eaf2b95f831d3744065ac5f6a0f5ba3928"
+  },
+  {
+   "file": "index/purposes/AK.parquet",
+   "bytes": 173556,
+   "sha256": "611eaae5a1bf0ec362a3d9a20896ad350171f7745845f2da9774179b2c5f2b17",
+   "rows": 11720
+  },
+  {
+   "file": "index/purposes/AL.parquet",
+   "bytes": 349464,
+   "sha256": "6c493591ddc41c12cfbc0e1ea91f0986569c3157da54b92fc73856655be32b22",
+   "rows": 21802
+  },
+  {
+   "file": "index/purposes/AR.parquet",
+   "bytes": 305798,
+   "sha256": "6a7315540d58238787823b8d794939547987873a27a319fa9a55c9f37960fd0f",
+   "rows": 17456
+  },
+  {
+   "file": "index/purposes/AS.parquet",
+   "bytes": 1825,
+   "sha256": "85e7ea7975eeeee7b4c0334ade330039874775603b11ef0d188855fc7369a8ab",
+   "rows": 79
+  },
+  {
+   "file": "index/purposes/AZ.parquet",
+   "bytes": 651953,
+   "sha256": "6c4c63054ebfb02440be9dc1916b7bceaf2b2a7a95bc0aa2a4598d458dc4951a",
+   "rows": 36602
+  },
+  {
+   "file": "index/purposes/CA.parquet",
+   "bytes": 5983883,
+   "sha256": "5d6560b42fc461a19473424eb293bd7ed19ca947f98836b62bcb99e16c9113b7",
+   "rows": 287854
+  },
+  {
+   "file": "index/purposes/CO.parquet",
+   "bytes": 1133762,
+   "sha256": "fc9d38a639214b981b60af308dec4ea6f79c7990f3be14a3f428c3eb1efad7c2",
+   "rows": 65474
+  },
+  {
+   "file": "index/purposes/CT.parquet",
+   "bytes": 823351,
+   "sha256": "86dc6c7b3f0138533b0886b8bb8055ffa9e9260a3a5210bba3c1a94d4009b79d",
+   "rows": 45719
+  },
+  {
+   "file": "index/purposes/DC.parquet",
+   "bytes": 1694559,
+   "sha256": "7ce0c89a0c4f3cafb654099ffcef4721a3c5875ca07947e37a87b98fde3ff320",
+   "rows": 84253
+  },
+  {
+   "file": "index/purposes/DE.parquet",
+   "bytes": 176254,
+   "sha256": "722814700caa6701c6ff89c6a20e3fee2fcc9e41a18563616142327a7bfe23be",
+   "rows": 9514
+  },
+  {
+   "file": "index/purposes/FL.parquet",
+   "bytes": 1637535,
+   "sha256": "d76e56b13f638e34bb1bc131a2773b2067ea9f62e334445433ca2c4c8405052e",
+   "rows": 96361
+  },
+  {
+   "file": "index/purposes/GA.parquet",
+   "bytes": 853888,
+   "sha256": "069bcac11431783a5c588b9c51f2b65c6db345173f4e14f01c441e51ccb6d318",
+   "rows": 51084
+  },
+  {
+   "file": "index/purposes/GU.parquet",
+   "bytes": 4099,
+   "sha256": "2201d89013f865119671eed7d4f56d9a9a4564b7d6dd73d0e7281bf561c0163f",
+   "rows": 217
+  },
+  {
+   "file": "index/purposes/HI.parquet",
+   "bytes": 323610,
+   "sha256": "3388e259569df25507ca76e8961d23af76be35a5ac0136bd20d423075d33499e",
+   "rows": 16395
+  },
+  {
+   "file": "index/purposes/IA.parquet",
+   "bytes": 663684,
+   "sha256": "7a52a5a80efc74fa3e2574e2cc00543ebe93893e2c03a21ff4bbe1cd8eb024d1",
+   "rows": 41917
+  },
+  {
+   "file": "index/purposes/ID.parquet",
+   "bytes": 247269,
+   "sha256": "1298927603c21463816b2cfdeba6e8c7c6b88707c6eb70ac62e3191f4216aa05",
+   "rows": 15632
+  },
+  {
+   "file": "index/purposes/IL.parquet",
+   "bytes": 1599626,
+   "sha256": "9468d15fe799b673073b33f9568f36bd62db3756a8cb5d61a1353b3a295e31ab",
+   "rows": 87683
+  },
+  {
+   "file": "index/purposes/IN.parquet",
+   "bytes": 656697,
+   "sha256": "ea7773efd5b5ef02f13b754d491ee962216f594a1bd7923b8ea8e08ba014ae68",
+   "rows": 43163
+  },
+  {
+   "file": "index/purposes/KS.parquet",
+   "bytes": 430907,
+   "sha256": "175e3c8ac0e5ba19ba93b6788a0561091eb4a81b9c1b9be3c75cef90a34a1bd3",
+   "rows": 26755
+  },
+  {
+   "file": "index/purposes/KY.parquet",
+   "bytes": 438950,
+   "sha256": "9362c2bc50e3bf4f12366419edb307a31007fb5778bd2577a05570fa8b1b41bc",
+   "rows": 24972
+  },
+  {
+   "file": "index/purposes/LA.parquet",
+   "bytes": 397640,
+   "sha256": "c995144a23f9d534f59570decf4e0b309704254e0abc4a4c5de9f125ef8b2e5c",
+   "rows": 22623
+  },
+  {
+   "file": "index/purposes/MA.parquet",
+   "bytes": 1717345,
+   "sha256": "4e6b4a8030a437ea762a62fa8ad5c50f547a405b744bd066a6b8880a3f663477",
+   "rows": 94155
+  },
+  {
+   "file": "index/purposes/MD.parquet",
+   "bytes": 886811,
+   "sha256": "3d5865150c808cfcd37f3091ecd795f8344aae4a4660124416c1bc4e90f5b0a8",
+   "rows": 49326
+  },
+  {
+   "file": "index/purposes/ME.parquet",
+   "bytes": 416970,
+   "sha256": "622169a7e4cecb1130b02088a228ec4cdace882fcafeb19986cebc1d2bfa8c5b",
+   "rows": 22298
+  },
+  {
+   "file": "index/purposes/MI.parquet",
+   "bytes": 1177422,
+   "sha256": "1e186b0313b93585e697b4ce70d37feee82e0365550b13d5ba2897b001290c14",
+   "rows": 67937
+  },
+  {
+   "file": "index/purposes/MN.parquet",
+   "bytes": 1096056,
+   "sha256": "dda6ebe26ac429b5a18daf04b0cd5949d190f636cb9bdfc7e83bcd3f1e38a561",
+   "rows": 60068
+  },
+  {
+   "file": "index/purposes/MO.parquet",
+   "bytes": 790280,
+   "sha256": "74ce67c19ad6f8ea09ae46ea6367d4d3b44452297721f00fa3f6d211295f80b6",
+   "rows": 47698
+  },
+  {
+   "file": "index/purposes/MP.parquet",
+   "bytes": 2103,
+   "sha256": "b84cdfecd7ab44cb345fd3795d6b3ed4dc1264eb54d45d56fa418199ad93eb37",
+   "rows": 106
+  },
+  {
+   "file": "index/purposes/MS.parquet",
+   "bytes": 180223,
+   "sha256": "9cb163be981ab3f8102451bedf9a6084ac61e17b3910d68fa11e327e1f451336",
+   "rows": 10609
+  },
+  {
+   "file": "index/purposes/MT.parquet",
+   "bytes": 308791,
+   "sha256": "443816095bf113db34a3d89183f4aa2e4503346f24f391e9fbcc40275b5f2fa3",
+   "rows": 19116
+  },
+  {
+   "file": "index/purposes/NC.parquet",
+   "bytes": 1065298,
+   "sha256": "fc4410da674b55008c83df21e0972730befb287499d768721b133fe65d2bd39c",
+   "rows": 59560
+  },
+  {
+   "file": "index/purposes/ND.parquet",
+   "bytes": 169268,
+   "sha256": "80f5fdc98f40fe92db4e9980d193b7344e32e3a4d5889ae6d16952b7fc835692",
+   "rows": 9516
+  },
+  {
+   "file": "index/purposes/NE.parquet",
+   "bytes": 279801,
+   "sha256": "026c15a3df1ec10c04d53f9914f480875c1ab31568eff89666553060c3203a39",
+   "rows": 20294
+  },
+  {
+   "file": "index/purposes/NH.parquet",
+   "bytes": 310143,
+   "sha256": "22cfeb0811327b8ebccd67e8d502393ffe4d393816042e27ae8ee46f90e71cdc",
+   "rows": 18597
+  },
+  {
+   "file": "index/purposes/NJ.parquet",
+   "bytes": 772488,
+   "sha256": "805ca0b6c25b4233bcd45cda384920662a3f4be09b2a376b814faab036fb1701",
+   "rows": 45033
+  },
+  {
+   "file": "index/purposes/NM.parquet",
+   "bytes": 309672,
+   "sha256": "b64523224275a3cd77306e936c4f66faa8ed87b0d4bcc6283f4539f65ddd1971",
+   "rows": 16614
+  },
+  {
+   "file": "index/purposes/NV.parquet",
+   "bytes": 229686,
+   "sha256": "d19066861e748f149838bb43f3ba2e13ba01c26e6a0648f01d6b49aa6612df84",
+   "rows": 13807
+  },
+  {
+   "file": "index/purposes/NY.parquet",
+   "bytes": 4065897,
+   "sha256": "bfc1ddc074a5dfe7037333b44e40b06dccdb4c5b6ceb9d855fcd9319db668182",
+   "rows": 210174
+  },
+  {
+   "file": "index/purposes/OH.parquet",
+   "bytes": 1252143,
+   "sha256": "836a3b662f4a74640a7bd68b55761aa528c506398e4aa893e8bfc7d70fc8e142",
+   "rows": 81562
+  },
+  {
+   "file": "index/purposes/OK.parquet",
+   "bytes": 406391,
+   "sha256": "99492255512fc8dfc7925cdf06d04f9aea2d3a3e7e627af7bb44a296b994225a",
+   "rows": 26840
+  },
+  {
+   "file": "index/purposes/OR.parquet",
+   "bytes": 958861,
+   "sha256": "3a5d172d1239337bbfeb9ad1fc52ed9e40715a0f2a384fdf09b4a97a4717843f",
+   "rows": 52452
+  },
+  {
+   "file": "index/purposes/PA.parquet",
+   "bytes": 1699094,
+   "sha256": "b5931ebf10491bef731ee4d3350590d78ac0c200c9b9acc236dea6f6e19e2470",
+   "rows": 99474
+  },
+  {
+   "file": "index/purposes/PR.parquet",
+   "bytes": 56787,
+   "sha256": "671e2d90b35667baca7f289fb47b2f787f1666f7a96216aa3c764eaf159a7d04",
+   "rows": 3331
+  },
+  {
+   "file": "index/purposes/RI.parquet",
+   "bytes": 250566,
+   "sha256": "d35e3668699778fa3edeb6a2670264a20f71a60b1ff3b82ce87c6336dba606c6",
+   "rows": 15600
+  },
+  {
+   "file": "index/purposes/SC.parquet",
+   "bytes": 351305,
+   "sha256": "e366492f0013d6604da87625435b7f64d4ba165b87e9edff21333a88173b295d",
+   "rows": 22004
+  },
+  {
+   "file": "index/purposes/SD.parquet",
+   "bytes": 154998,
+   "sha256": "f3e9c852c2499271cf332cda86490c30c10b8aaa3967355750c5602dab8dda88",
+   "rows": 8658
+  },
+  {
+   "file": "index/purposes/TN.parquet",
+   "bytes": 782218,
+   "sha256": "6a723d7af64d7f7ed22f03ea552f0e267dcec44cde4c21a4f515bca935be2f5e",
+   "rows": 45707
+  },
+  {
+   "file": "index/purposes/TX.parquet",
+   "bytes": 2539393,
+   "sha256": "88feb60154af5d4c130d0dc83c7ff86057913f25fbbe195c70d009e8528e9cd2",
+   "rows": 148740
+  },
+  {
+   "file": "index/purposes/UT.parquet",
+   "bytes": 322375,
+   "sha256": "b1f7f55c5f2b0e782c2adf327a3e3a206c34dd8b1106465ea1bab204d0730686",
+   "rows": 19356
+  },
+  {
+   "file": "index/purposes/VA.parquet",
+   "bytes": 1367934,
+   "sha256": "80c496e81179491369609876ac42bae157c8905d5fc98a5c8664937f8da05032",
+   "rows": 74348
+  },
+  {
+   "file": "index/purposes/VI.parquet",
+   "bytes": 13515,
+   "sha256": "02d6ab4f8102ed7ea1d5beb703b1cfe10e5ff56f1b9d3041c04e2de834acf623",
+   "rows": 858
+  },
+  {
+   "file": "index/purposes/VT.parquet",
+   "bytes": 217317,
+   "sha256": "d4267860cebe7bf2dd440a0f0208cd543146274d40b6407802370a3fc15d2d11",
+   "rows": 13502
+  },
+  {
+   "file": "index/purposes/WA.parquet",
+   "bytes": 1064661,
+   "sha256": "0667e00231b6fc8b6985280371f1ee5d2955ba474dae2fe9897c250e4d074c27",
+   "rows": 65371
+  },
+  {
+   "file": "index/purposes/WI.parquet",
+   "bytes": 813914,
+   "sha256": "98ea5101b164ead44886466a02717a643b285fe70f1f804a6385c6c878a10911",
+   "rows": 53440
+  },
+  {
+   "file": "index/purposes/WV.parquet",
+   "bytes": 247700,
+   "sha256": "fc93753dd23562a45e773345bd9fa6543a13d7663adcb17a18b1f9d505688056",
+   "rows": 13613
+  },
+  {
+   "file": "index/purposes/WY.parquet",
+   "bytes": 110948,
+   "sha256": "af1df67d9965f437718d83277a911423397514fc9e3c0c49d18f96dd24eda549",
+   "rows": 7751
+  },
+  {
+   "file": "index/purposes/XX.parquet",
+   "bytes": 1466009,
+   "sha256": "ab170f7f14b5158449eabd2906ddef07798a79262abe005e8814f8b9792c7802",
+   "rows": 58693
+  },
+  {
+   "file": "index/recipient_eins.parquet",
+   "bytes": 15254104,
+   "sha256": "ade877f15ae4ea5c3fd7044f1bdf13d9f29fd7938cf5653e561674d6624e74f2",
+   "rows": 1987660
+  },
+  {
+   "file": "index/recipient_info/AK.parquet",
+   "bytes": 251467,
+   "sha256": "533e7f14b3233c77f7305ffa56b2742de5ba4449fd882e9fbad20527ccf6fb75",
+   "rows": 16951
+  },
+  {
+   "file": "index/recipient_info/AL.parquet",
+   "bytes": 608311,
+   "sha256": "c95f5e9fc8c07c657fac39e8a598c77efdab7ed07a658e61e64af34d643bf66c",
+   "rows": 40291
+  },
+  {
+   "file": "index/recipient_info/AR.parquet",
+   "bytes": 372162,
+   "sha256": "5233b00ff2fc3257c3234e72aa2d3d36d996a3d22cfa66d7de514cc01def0b5b",
+   "rows": 23408
+  },
+  {
+   "file": "index/recipient_info/AS.parquet",
+   "bytes": 2478,
+   "sha256": "ab1f4b02b9ea7d552d48d77806416a63b22fff6dc16c2a364261bb213cc8543a",
+   "rows": 70
+  },
+  {
+   "file": "index/recipient_info/AZ.parquet",
+   "bytes": 827629,
+   "sha256": "039735ee58ad9f587d7395ed7f611a219018b63cf7fb06d43d0359f1f73bd7df",
+   "rows": 54013
+  },
+  {
+   "file": "index/recipient_info/CA.parquet",
+   "bytes": 5907526,
+   "sha256": "85b455f17bebad5524a58fe13833ee4fcce723f91abbb3e8438608d4d3451466",
+   "rows": 380341
+  },
+  {
+   "file": "index/recipient_info/CO.parquet",
+   "bytes": 1266110,
+   "sha256": "0d0eed02e0be2e917d9d7407e4d2f05f818a5eed2ac43523eced8b3e7cb1d31c",
+   "rows": 81965
+  },
+  {
+   "file": "index/recipient_info/CT.parquet",
+   "bytes": 908370,
+   "sha256": "53c8d22fbe95dc4fc8332b531ad434e075bbb2f26d388701815fafbacd3f0030",
+   "rows": 62120
+  },
+  {
+   "file": "index/recipient_info/DC.parquet",
+   "bytes": 793151,
+   "sha256": "332974ad11979f3629d4c1ef7b58e2269b5a3cd545fd9d607d292dd02086646e",
+   "rows": 56792
+  },
+  {
+   "file": "index/recipient_info/DE.parquet",
+   "bytes": 175529,
+   "sha256": "b32196bd4b2e6dbf4897c1826a82dfa5db94bd7592cb2d1bb92b182572058b20",
+   "rows": 11694
+  },
+  {
+   "file": "index/recipient_info/FL.parquet",
+   "bytes": 2906168,
+   "sha256": "dc5f6f6d09413c01c44ea6a7925f67a68855da7618d5690c41db6083b8121126",
+   "rows": 193166
+  },
+  {
+   "file": "index/recipient_info/GA.parquet",
+   "bytes": 1385612,
+   "sha256": "8ab44aeb3b01037342c9521578823195a70072f54146e47e2b87ee6af7d62e89",
+   "rows": 92416
+  },
+  {
+   "file": "index/recipient_info/GU.parquet",
+   "bytes": 5363,
+   "sha256": "3fc7d152af0598c3fed86869898d27cddf3d49e94e50a0af81427ee6c9f4350e",
+   "rows": 223
+  },
+  {
+   "file": "index/recipient_info/HI.parquet",
+   "bytes": 260368,
+   "sha256": "a63817c3383fe2e36df9e607ae81905eaefb6a44e7000ab1f71bd9e393452049",
+   "rows": 17342
+  },
+  {
+   "file": "index/recipient_info/IA.parquet",
+   "bytes": 771683,
+   "sha256": "c807ca18c795a9bdeef017478c71b7cf5ba175bca809d3385d1a5ddc67e8924b",
+   "rows": 52107
+  },
+  {
+   "file": "index/recipient_info/ID.parquet",
+   "bytes": 312969,
+   "sha256": "296d897cefa2c8861225f35474d5fb45ead7b9b11b0450252399475f72961393",
+   "rows": 20645
+  },
+  {
+   "file": "index/recipient_info/IL.parquet",
+   "bytes": 2329288,
+   "sha256": "98d175c68694dd6913687f399d466bc03250cb9b9ed5bd19ee51f533c0439039",
+   "rows": 149858
+  },
+  {
+   "file": "index/recipient_info/IN.parquet",
+   "bytes": 1175159,
+   "sha256": "e4e091c6cc55997b2e6a97cdbe8821cc0f94467239c40092b0bfab376b4b9f1d",
+   "rows": 76323
+  },
+  {
+   "file": "index/recipient_info/KS.parquet",
+   "bytes": 619424,
+   "sha256": "8a1cc47c29b2341ce4668a823216c7d463656bd8d68d9f65ba003973d7c50d42",
+   "rows": 41220
+  },
+  {
+   "file": "index/recipient_info/KY.parquet",
+   "bytes": 598933,
+   "sha256": "d0dbfd4c36e470b5e34abb77067ab89e7e7e719046c84926e3239cf50049fddf",
+   "rows": 39653
+  },
+  {
+   "file": "index/recipient_info/LA.parquet",
+   "bytes": 530652,
+   "sha256": "b9e766f6ddaff7e1f5565e42ec99a0c9253cd1082adf558d813293b2f2818c20",
+   "rows": 34175
+  },
+  {
+   "file": "index/recipient_info/MA.parquet",
+   "bytes": 2030576,
+   "sha256": "f783147bfd415722634afcf2cfcab16c5919c4063549adc12ccf621c09563789",
+   "rows": 139258
+  },
+  {
+   "file": "index/recipient_info/MD.parquet",
+   "bytes": 1148243,
+   "sha256": "92a0e66ec64c7ba7eed64e666b23d205a68fa2ab19f74f0b1d1c3ed499f43821",
+   "rows": 74333
+  },
+  {
+   "file": "index/recipient_info/ME.parquet",
+   "bytes": 453097,
+   "sha256": "499c8fb514704f6576f08bafeb202ee3db0a81d2aeb237b342ff7558aa3dcd16",
+   "rows": 27594
+  },
+  {
+   "file": "index/recipient_info/MI.parquet",
+   "bytes": 1752296,
+   "sha256": "853a84d1ec3a4b4708f37534764519a1f6d4ef6f03517bc9da3ac32ac802e7e3",
+   "rows": 115127
+  },
+  {
+   "file": "index/recipient_info/MN.parquet",
+   "bytes": 1413822,
+   "sha256": "22e55cb303f1233f1279f889f6044310e5d5e97fe1ab271f78a44d6e5ab2b69a",
+   "rows": 92710
+  },
+  {
+   "file": "index/recipient_info/MO.parquet",
+   "bytes": 1049508,
+   "sha256": "5f89894cf227a8b2bdd084923920c44de5b8d7413e142fedb732254a8f407e33",
+   "rows": 69928
+  },
+  {
+   "file": "index/recipient_info/MP.parquet",
+   "bytes": 3338,
+   "sha256": "ae9a4279994aa852b61e1bd9869f3abb97655b1dd386a1168d620f5c4a8bd283",
+   "rows": 101
+  },
+  {
+   "file": "index/recipient_info/MS.parquet",
+   "bytes": 275251,
+   "sha256": "e59522ef21cb431f9a91021566eeb21d2989ada447e1d5e2d4e50e1374b8d89a",
+   "rows": 17440
+  },
+  {
+   "file": "index/recipient_info/MT.parquet",
+   "bytes": 353246,
+   "sha256": "a7766b61f69ef19ce0a8d9555de62dc9743cdce1c05fa29468019a704e7dd6ad",
+   "rows": 24185
+  },
+  {
+   "file": "index/recipient_info/NC.parquet",
+   "bytes": 1706479,
+   "sha256": "29fe10f25f8332132e6e618c547807ada4a352dd413ca62d3b8a57ed0cce4735",
+   "rows": 111888
+  },
+  {
+   "file": "index/recipient_info/ND.parquet",
+   "bytes": 189801,
+   "sha256": "ed3e2cbb47ab43728018b7f8f310e17e251265ea5641ba56898cebea86c528a8",
+   "rows": 12323
+  },
+  {
+   "file": "index/recipient_info/NE.parquet",
+   "bytes": 370007,
+   "sha256": "440f46944f234579f2fb9bcf6756542fb4f5949557b2af5b7e737bb5325db010",
+   "rows": 24739
+  },
+  {
+   "file": "index/recipient_info/NH.parquet",
+   "bytes": 332504,
+   "sha256": "c69ffbd981ab5d06e4a1bdacbac168198cf0d499cc04fde6e908ccfce4d5ca93",
+   "rows": 21725
+  },
+  {
+   "file": "index/recipient_info/NJ.parquet",
+   "bytes": 1701222,
+   "sha256": "f5f3a8937f97084812fec8c30c1bd849357d41fe557f3eebafc0a836d8854bd6",
+   "rows": 114402
+  },
+  {
+   "file": "index/recipient_info/NM.parquet",
+   "bytes": 342245,
+   "sha256": "42fa5bc843bbd3823844c5926bcf6b8c75c40cd6de02a53c891c49e225a870b5",
+   "rows": 22940
+  },
+  {
+   "file": "index/recipient_info/NV.parquet",
+   "bytes": 271250,
+   "sha256": "ed9b007b3526cd07f0ccb6ea88293e07de2358e22d52461e0ed092a010efab7d",
+   "rows": 17832
+  },
+  {
+   "file": "index/recipient_info/NY.parquet",
+   "bytes": 4917817,
+   "sha256": "698b0ed571e49352ae1323d08179619c762d44d023a618635f2b33792955f941",
+   "rows": 341409
+  },
+  {
+   "file": "index/recipient_info/OH.parquet",
+   "bytes": 2086780,
+   "sha256": "e80aabe1b65075d5ba27dc09b0154c65739a4e9adf0196548fa60dd18d8d5004",
+   "rows": 135422
+  },
+  {
+   "file": "index/recipient_info/OK.parquet",
+   "bytes": 531089,
+   "sha256": "1b2289072a665b1c83807f53c9a6f5c15f6bac54ede3e8237418d84df0d14e00",
+   "rows": 35020
+  },
+  {
+   "file": "index/recipient_info/OR.parquet",
+   "bytes": 831177,
+   "sha256": "43161483aa92fa70a4de84738eac3d9b99299f1a6d0f742f61026fd4fe89e1f4",
+   "rows": 54284
+  },
+  {
+   "file": "index/recipient_info/PA.parquet",
+   "bytes": 2757467,
+   "sha256": "9a7ff1f7de672d95345bd33e6f427447229a23cdb0cb29d321565caeac352601",
+   "rows": 179864
+  },
+  {
+   "file": "index/recipient_info/PR.parquet",
+   "bytes": 94644,
+   "sha256": "9def28af1170d00f4709e55e2063e01bbe62c7a416585adc85584575f6456348",
+   "rows": 5670
+  },
+  {
+   "file": "index/recipient_info/RI.parquet",
+   "bytes": 226384,
+   "sha256": "4c17c13d668fb7bb82c87f9c627d3ebef92d06c01b53e92b967cd0ea4a04ea98",
+   "rows": 15261
+  },
+  {
+   "file": "index/recipient_info/SC.parquet",
+   "bytes": 626846,
+   "sha256": "56bb004e99fcaf8ad9a48440986770ead624b461298ca007241871742247e9a1",
+   "rows": 41402
+  },
+  {
+   "file": "index/recipient_info/SD.parquet",
+   "bytes": 187391,
+   "sha256": "cd3434039a68f8bfe920231884593c63f67f7c0d944358465bf29008acd2a539",
+   "rows": 11981
+  },
+  {
+   "file": "index/recipient_info/TN.parquet",
+   "bytes": 975134,
+   "sha256": "ff1a8ad7012ba521768b76820f5919bc5e1b532f45587bbfbc5ff6ad211cc516",
+   "rows": 67263
+  },
+  {
+   "file": "index/recipient_info/TX.parquet",
+   "bytes": 3348837,
+   "sha256": "c52c03a4a8c707166aaa10311114a8ff044379be4f48f093f36b35d72dab4255",
+   "rows": 216326
+  },
+  {
+   "file": "index/recipient_info/UT.parquet",
+   "bytes": 402787,
+   "sha256": "eae94d15ff8a074fd72145dff20950ee8fd1ca333b516c2e19cbaf504c145482",
+   "rows": 27544
+  },
+  {
+   "file": "index/recipient_info/VA.parquet",
+   "bytes": 1588885,
+   "sha256": "ee0ee43f491b91b37bf97715a352e8a73e50bcca7c44052aedf424c60ffe6817",
+   "rows": 103518
+  },
+  {
+   "file": "index/recipient_info/VI.parquet",
+   "bytes": 18195,
+   "sha256": "ab8c813204e72dc2a67c81426465d9d56ccc37671b163cd0e1f69620c516468a",
+   "rows": 1050
+  },
+  {
+   "file": "index/recipient_info/VT.parquet",
+   "bytes": 287536,
+   "sha256": "efe8d1399608d18843356cf12d35c77b3e822dc710e3e9c64c86b77695aba260",
+   "rows": 18654
+  },
+  {
+   "file": "index/recipient_info/WA.parquet",
+   "bytes": 1426734,
+   "sha256": "8826bae7ddd53055994cd4bb531ee8d8385daaec4409d4abde276897a42f6356",
+   "rows": 88687
+  },
+  {
+   "file": "index/recipient_info/WI.parquet",
+   "bytes": 1230504,
+   "sha256": "6075b31d6b769b76dcdd0837438618bc0fea1738276789ea70d7fd639fbe57fd",
+   "rows": 82707
+  },
+  {
+   "file": "index/recipient_info/WV.parquet",
+   "bytes": 327409,
+   "sha256": "5ea76917a98b7850993cfd1d995e4bece7a1185a35e6d7563b15a3757d2e4d04",
+   "rows": 21876
+  },
+  {
+   "file": "index/recipient_info/WY.parquet",
+   "bytes": 156640,
+   "sha256": "eb586f4f242bee7bd913e8b3d9a59aaee0f71619b5fc563d09c7072975e4931d",
+   "rows": 10330
+  },
+  {
+   "file": "index/recipient_info/XX.parquet",
+   "bytes": 2351423,
+   "sha256": "51fc76592813e74859b26eae4588e00a39bdbb34229415c0129348b0ba116a77",
+   "rows": 135806
+  },
+  {
+   "file": "index/recipient_keys/AK.parquet",
+   "bytes": 182353,
+   "sha256": "5acf1c56d413a5c9b957322a377f3a8e15013bf40a89e5ca4a36adb7b0bbed60",
+   "rows": 16951
+  },
+  {
+   "file": "index/recipient_keys/AL.parquet",
+   "bytes": 378285,
+   "sha256": "032503e89d7dd33b40821b9492af35223ed4df6e8707ec3652b6b71a389f0fc6",
+   "rows": 40291
+  },
+  {
+   "file": "index/recipient_keys/AR.parquet",
+   "bytes": 261555,
+   "sha256": "240b5118eb50bebb40b7755e9e5603f9ac763563b29e59062bdf4124bb2d3a3b",
+   "rows": 23408
+  },
+  {
+   "file": "index/recipient_keys/AS.parquet",
+   "bytes": 1592,
+   "sha256": "b73c5fac7d95eb1ae28403bf7846111f4cedafc1dd1c92582149163e27fc6b75",
+   "rows": 70
+  },
+  {
+   "file": "index/recipient_keys/AZ.parquet",
+   "bytes": 521314,
+   "sha256": "e6750b2ff86c255c45728cec2038c17dd59545d81974cf3027a436292e76a187",
+   "rows": 54013
+  },
+  {
+   "file": "index/recipient_keys/CA.parquet",
+   "bytes": 3448911,
+   "sha256": "d91a9ec15b1ee50c9334067a5d9b77b6b0bd26b5aca4f76b21cf19ccd75573dd",
+   "rows": 380341
+  },
+  {
+   "file": "index/recipient_keys/CO.parquet",
+   "bytes": 775960,
+   "sha256": "82a19dd80f2ab40cf92480f6be5fe50b7f00fa68b276cfe2b34e350e97943562",
+   "rows": 81965
+  },
+  {
+   "file": "index/recipient_keys/CT.parquet",
+   "bytes": 585060,
+   "sha256": "12cf6b9cacfb7f28459823e15add82ddd2b495536ea370a444a523a8f5931214",
+   "rows": 62120
+  },
+  {
+   "file": "index/recipient_keys/DC.parquet",
+   "bytes": 544370,
+   "sha256": "21fd8ca0127ab4c03a253173c8c41886c0ed77e2603c58e5237f7e4b65311fa8",
+   "rows": 56792
+  },
+  {
+   "file": "index/recipient_keys/DE.parquet",
+   "bytes": 119060,
+   "sha256": "93394935c6229406ce6d419bf2404480fbe5caf00b68c627b8f0c7913c6b7833",
+   "rows": 11694
+  },
+  {
+   "file": "index/recipient_keys/FL.parquet",
+   "bytes": 1732847,
+   "sha256": "835d7d5b6b5c9f6bcce8c377a8eccda8018f9378f292ba3806e767d51589f97e",
+   "rows": 193166
+  },
+  {
+   "file": "index/recipient_keys/GA.parquet",
+   "bytes": 853392,
+   "sha256": "ac5e2fb77c5aca4cb25a55d6a88375f8946f72065b3d2affcbc08bef9dcd11b7",
+   "rows": 92416
+  },
+  {
+   "file": "index/recipient_keys/GU.parquet",
+   "bytes": 3374,
+   "sha256": "0c3c5ea64e40db64e488abbc3bcabee1be9affe87f7c59892733b537369b58aa",
+   "rows": 223
+  },
+  {
+   "file": "index/recipient_keys/HI.parquet",
+   "bytes": 169461,
+   "sha256": "41cd1ef4b0d21587201aafb57308036f5a67a9c26f2585c70574b0029b8d4e6d",
+   "rows": 17342
+  },
+  {
+   "file": "index/recipient_keys/IA.parquet",
+   "bytes": 499399,
+   "sha256": "2168a5651dcca6aba182bac47795703a358a9264dc25d4cbd402c8315acf3d1a",
+   "rows": 52107
+  },
+  {
+   "file": "index/recipient_keys/ID.parquet",
+   "bytes": 212260,
+   "sha256": "1055027114849a0b551bc14891c03be926b5d8742f9b0e78233c240696d18f2f",
+   "rows": 20645
+  },
+  {
+   "file": "index/recipient_keys/IL.parquet",
+   "bytes": 1423403,
+   "sha256": "9ee494efbdff375757b165457b5a31285acd5679738419a278a6b0314caeebca",
+   "rows": 149858
+  },
+  {
+   "file": "index/recipient_keys/IN.parquet",
+   "bytes": 725873,
+   "sha256": "fa606fa14a1763f9fa39503660858ed12d6b0c5fb823dace3efe280da15e1bfd",
+   "rows": 76323
+  },
+  {
+   "file": "index/recipient_keys/KS.parquet",
+   "bytes": 387860,
+   "sha256": "394d545b1cac43e071db5426300e3a2fd3fd5d9082d1461e54984ac95e47f2cd",
+   "rows": 41220
+  },
+  {
+   "file": "index/recipient_keys/KY.parquet",
+   "bytes": 377899,
+   "sha256": "5e7a890aaa6184583d26e0616bc581883c29f632d92c1f2ff6e7cc788702d373",
+   "rows": 39653
+  },
+  {
+   "file": "index/recipient_keys/LA.parquet",
+   "bytes": 350164,
+   "sha256": "ed27ad33a460f318709990404da84770f663357d85e8b89336e81ce12241c09e",
+   "rows": 34175
+  },
+  {
+   "file": "index/recipient_keys/MA.parquet",
+   "bytes": 1280871,
+   "sha256": "801fdb8c8994c8fdf115b2adf592f0a8e4904580b61ab677bb546f44892ad733",
+   "rows": 139258
+  },
+  {
+   "file": "index/recipient_keys/MD.parquet",
+   "bytes": 706938,
+   "sha256": "c0fc27de0b4f2751b1d94376521e766cab1573b5e40da81e8225b8217d7d4bc6",
+   "rows": 74333
+  },
+  {
+   "file": "index/recipient_keys/ME.parquet",
+   "bytes": 270920,
+   "sha256": "d3f2a81936c13847390ea08cb1e73bcdc749a53e67aa22aaf1a646b0757ba85a",
+   "rows": 27594
+  },
+  {
+   "file": "index/recipient_keys/MI.parquet",
+   "bytes": 1080921,
+   "sha256": "3a573b2f297a2b8050e154317d29515c1b58c0e751f881075d3e291ac59c60f1",
+   "rows": 115127
+  },
+  {
+   "file": "index/recipient_keys/MN.parquet",
+   "bytes": 858493,
+   "sha256": "6436a4db4b2954fab76ba957ecc566e1a3297fa12158719cc4f436397ae42b3f",
+   "rows": 92710
+  },
+  {
+   "file": "index/recipient_keys/MO.parquet",
+   "bytes": 646062,
+   "sha256": "a6c82654842d42d180effa7bd9bacffe61f91fca9be3f65c207abd8aa59215b2",
+   "rows": 69928
+  },
+  {
+   "file": "index/recipient_keys/MP.parquet",
+   "bytes": 2121,
+   "sha256": "aaf9a7ca7ca9380b3e63489b796be88ae460665e16df933f88376c6470fa0316",
+   "rows": 101
+  },
+  {
+   "file": "index/recipient_keys/MS.parquet",
+   "bytes": 188112,
+   "sha256": "d3c3eba800b0b87ce29888813d16df617423a005e0b249e58f947f3e6474787d",
+   "rows": 17440
+  },
+  {
+   "file": "index/recipient_keys/MT.parquet",
+   "bytes": 243076,
+   "sha256": "9dd07c078580230731abb1c36ad42244f8da0185ea7db00e46243f3636659e75",
+   "rows": 24185
+  },
+  {
+   "file": "index/recipient_keys/NC.parquet",
+   "bytes": 1070732,
+   "sha256": "89d8773cf14a25f75a5cbe6554bcb7b1516783f14cba57bd9de35e29ae63bd7b",
+   "rows": 111888
+  },
+  {
+   "file": "index/recipient_keys/ND.parquet",
+   "bytes": 120404,
+   "sha256": "3f32d36bbaa944c94a612b5695c52be68836cbeffa359b710603500e4780b04a",
+   "rows": 12323
+  },
+  {
+   "file": "index/recipient_keys/NE.parquet",
+   "bytes": 240284,
+   "sha256": "719003b9484cfcbddb51893fbe06ccec39bd2695e6cbd592865b0c03bb78c20f",
+   "rows": 24739
+  },
+  {
+   "file": "index/recipient_keys/NH.parquet",
+   "bytes": 212523,
+   "sha256": "349b3f1975a15dcfc409f804d7f73785fd9d85c8f86e5a1a054862617244352a",
+   "rows": 21725
+  },
+  {
+   "file": "index/recipient_keys/NJ.parquet",
+   "bytes": 1044961,
+   "sha256": "6dc6c66cab60a69362fd9be78730a633e22c7b05b648b65094f81d4e35ec6551",
+   "rows": 114402
+  },
+  {
+   "file": "index/recipient_keys/NM.parquet",
+   "bytes": 224111,
+   "sha256": "773256e8d876b96ba21ea828b72ab861e0fab31bb1322e6bd06e15785e482a6b",
+   "rows": 22940
+  },
+  {
+   "file": "index/recipient_keys/NV.parquet",
+   "bytes": 183194,
+   "sha256": "e5a3a7f689f73dc833a029eb88ed500566d2940b50e77c2fa1771b00c000d110",
+   "rows": 17832
+  },
+  {
+   "file": "index/recipient_keys/NY.parquet",
+   "bytes": 3084084,
+   "sha256": "1af5f19bfd4c0d2f8980ce85b178cd4ff8d887555fd856d1829cdea0d9c08eba",
+   "rows": 341409
+  },
+  {
+   "file": "index/recipient_keys/OH.parquet",
+   "bytes": 1268400,
+   "sha256": "11c9a3d524282213e3c8bf93459afcab9a10a8c74ca1472d85604011e7e222f2",
+   "rows": 135422
+  },
+  {
+   "file": "index/recipient_keys/OK.parquet",
+   "bytes": 332984,
+   "sha256": "837f6bb3fde92385530d1b7894d5a1e24a20f6f8f728978e94949029132da017",
+   "rows": 35020
+  },
+  {
+   "file": "index/recipient_keys/OR.parquet",
+   "bytes": 517384,
+   "sha256": "9ca5a21d25e1157decccf1ca18c95396d6b590c0645eac65856246c12ef212a4",
+   "rows": 54284
+  },
+  {
+   "file": "index/recipient_keys/PA.parquet",
+   "bytes": 1719411,
+   "sha256": "d9b877daba7d84f6d067cdcd1f26ee97c0c2b14744410f2a0d3d87ba62246957",
+   "rows": 179864
+  },
+  {
+   "file": "index/recipient_keys/PR.parquet",
+   "bytes": 59701,
+   "sha256": "652bd3178a5d1cbd5d3d8dea55066427eed2dcaeba21d1261b2aac1c921816e2",
+   "rows": 5670
+  },
+  {
+   "file": "index/recipient_keys/RI.parquet",
+   "bytes": 151168,
+   "sha256": "12570f74fcaeedbc429bad0009ac6fbf67adb8e5b8a7bba4ba2617a475346fba",
+   "rows": 15261
+  },
+  {
+   "file": "index/recipient_keys/SC.parquet",
+   "bytes": 393492,
+   "sha256": "b0e9d3ecd358c9a8430081458bd560c61de8590d9184f1a1c02b7e6c293e52f1",
+   "rows": 41402
+  },
+  {
+   "file": "index/recipient_keys/SD.parquet",
+   "bytes": 119273,
+   "sha256": "1d7ad24140b62535f6016334f95137aee5f9e207c8d4cede928428289f674308",
+   "rows": 11981
+  },
+  {
+   "file": "index/recipient_keys/TN.parquet",
+   "bytes": 628497,
+   "sha256": "2b658b28bec7dbaac0e14a979e189907fbc2a6c421a91b3ba90250f810830158",
+   "rows": 67263
+  },
+  {
+   "file": "index/recipient_keys/TX.parquet",
+   "bytes": 2018678,
+   "sha256": "ae4d1ce5b3c2df86d2aa003b3b167952ebe58b20515c47357388bc446e0dd49f",
+   "rows": 216326
+  },
+  {
+   "file": "index/recipient_keys/UT.parquet",
+   "bytes": 258279,
+   "sha256": "6a0f3df097df50ca7fb8325886a42ceacabe2c311432b8916d4b99f5746e9910",
+   "rows": 27544
+  },
+  {
+   "file": "index/recipient_keys/VA.parquet",
+   "bytes": 974571,
+   "sha256": "77451d9581ae7bc44ab51cbe09f7ba67160b22ca0a2cade408952688935814c0",
+   "rows": 103518
+  },
+  {
+   "file": "index/recipient_keys/VI.parquet",
+   "bytes": 11894,
+   "sha256": "060accd51abdbd452544341e5cd8bada48822195e1aa738c152e193d6509d857",
+   "rows": 1050
+  },
+  {
+   "file": "index/recipient_keys/VT.parquet",
+   "bytes": 185294,
+   "sha256": "c20671a32dba15832ba3146aa4559eb9340a17dfea5c86875248b759ad08a3b1",
+   "rows": 18654
+  },
+  {
+   "file": "index/recipient_keys/WA.parquet",
+   "bytes": 871973,
+   "sha256": "9904a13f80bc33aaae44d88da65423a2dbccaa7716ece317807a2e7047265320",
+   "rows": 88687
+  },
+  {
+   "file": "index/recipient_keys/WI.parquet",
+   "bytes": 781991,
+   "sha256": "dac49852071a0230da7a6e0f9a574eaec47bbc674cd8b9c9d0d6b973a10a6dae",
+   "rows": 82707
+  },
+  {
+   "file": "index/recipient_keys/WV.parquet",
+   "bytes": 235501,
+   "sha256": "93191b55f19adb919eeb57dda7d5257c99465b1e184ca2f0f054b7628b09e0b5",
+   "rows": 21876
+  },
+  {
+   "file": "index/recipient_keys/WY.parquet",
+   "bytes": 103190,
+   "sha256": "76a42f9a9b559a2d34504ffa3d8aeeedb6e2594b24d89be92b46f2b1f8ad3dff",
+   "rows": 10330
+  },
+  {
+   "file": "index/recipient_keys/XX.parquet",
+   "bytes": 1511388,
+   "sha256": "8d384f557d87247d6f7e85f3871fc51df298469cb6cb3c0bb15eaa412a7ff0f9",
+   "rows": 135806
+  },
+  {
+   "file": "meta.parquet",
+   "bytes": 5801,
+   "sha256": "518070bfaab62c0d68d368a1858de6b9b7a645e4cb60a25c84b26f0a237c56e0",
+   "rows": 41
+  },
+  {
+   "file": "pc_funders.parquet",
+   "bytes": 17334620,
+   "sha256": "ff0e84df0656a0f6053712647878d0c29f8ce1e83a1b042998d5a7a9d90c7619",
+   "rows": 93322
+  },
+  {
+   "file": "pf_app_info.parquet",
+   "bytes": 7942559,
+   "sha256": "5b09ec3e978d76a920035eb132397b9c69e17d860d94632630dc9f62001c0cd3",
+   "rows": 229675
+  },
+  {
+   "file": "pf_officers.parquet",
+   "bytes": 25393328,
+   "sha256": "d93454b1bad968fa3ece52b2c836e9a6b2e1cca0195177024f869afcd8b4f88b",
+   "rows": 2922561
+  },
+  {
+   "file": "qa_completeness.parquet",
+   "bytes": 2294,
+   "sha256": "38fcb07efc518aa01fc8aac0ae1c956c4183a12969d050359785d0ebeb772e48",
+   "rows": 9
+  },
+  {
+   "file": "subject_tags.parquet",
+   "bytes": 9752,
+   "sha256": "90a63969aaa0203a40fb87815758e52f5e189eaca2268b5cb2f5ea85912b90fb",
+   "rows": 23
+  }
+ ]
+}
