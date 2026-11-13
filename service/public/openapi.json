@@ -7,7 +7,7 @@
  },
  "servers": [
   {
-   "url": "https://YOUR-HOST.vercel.app"
+   "url": "https://foundation-data-search.vercel.app"
   }
  ],
  "paths": {
